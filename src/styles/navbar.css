@@ -1,0 +1,85 @@
+:root {
+    --blue: #4dc3c3;
+    --gold: #edc9b3;
+    --white: #ffffff;
+}
+
+nav {
+    width: 80%;
+    height: 3.3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    right: 50%;
+    transform: translateX(12.5%);
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-radius: 2rem;
+    border: 3px solid var(--gold);
+    background-color: var(--blue);
+    font-family: "Poppins", sans-serif;
+    box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+}
+
+.container-navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5rem;
+}
+
+.container-navbar a {
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container-navbar a h2 {
+    text-decoration: underline;
+}
+
+.container-navbar a img {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: auto;
+}
+
+.container-navbar a::after {
+    content: '';
+    display: block;
+    padding-bottom: 1px;
+    border-bottom: 0.2rem solid var(--white);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.container-navbar a:hover::after {
+    transform: scaleX(0.8);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    display: none;
+}
+
+.navbar-menu img {
+    width: 30px;
+    height: auto;
+}
