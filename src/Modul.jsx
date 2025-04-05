@@ -41,7 +41,55 @@ function Modul() {
             {currentPage === "zakat" && (
                 <div className="modul-page">
                     <h1>Pengantar Zakat</h1>
-                    <p>Ini adalah halaman untuk modul pengantar zakat.</p>
+                    <div className="zakat-content">
+                    <section>
+                        <h2>1. Konsep Dasar Zakat</h2>
+                        <p className="zakat-text">
+                        Zakat adalah salah satu rukun Islam yang wajib ditunaikan oleh setiap
+                        Muslim yang memenuhi syarat. Secara bahasa, zakat berarti <em>bersih, tumbuh, dan berkembang</em>, 
+                        sedangkan secara istilah, zakat adalah kewajiban mengeluarkan sebagian harta kepada kelompok 
+                        yang berhak menerimanya sesuai ketentuan syariat Islam.
+                        </p>
+                        <ul className="zakat-list">
+                        <li><strong>Zakat Fitrah:</strong> Wajib dikeluarkan sebelum Hari Raya Idulfitri.</li>
+                        <li><strong>Zakat Mal:</strong> Berlaku untuk harta tertentu seperti emas, perak, hasil pertanian, 
+                        peternakan, perdagangan, dan penghasilan jika telah mencapai nisab dan haul.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>2. Hukum Zakat</h2>
+                        <p className="zakat-text">Zakat hukumnya <strong>wajib</strong> bagi Muslim yang memenuhi syarat:</p>
+                        <ul className="zakat-list">
+                        <li><strong>Islam</strong> – Hanya diwajibkan bagi umat Islam.</li>
+                        <li><strong>Merdeka</strong> – Orang yang merdeka berkewajiban menunaikan zakat.</li>
+                        <li><strong>Berakal dan Baligh</strong> – Diperuntukkan bagi yang sudah dewasa dan berakal sehat.</li>
+                        <li><strong>Memiliki harta yang mencapai nisab dan haul</strong>.</li>
+                        </ul>
+                        <blockquote>
+                        <p><strong>QS. At-Taubah: 103</strong></p>
+                        <p>"Ambillah zakat dari sebagian harta mereka, dengan zakat itu kamu membersihkan dan menyucikan mereka..."</p>
+                        </blockquote>
+                    </section>
+            
+                    <section>
+                        <h2>3. Manfaat Zakat dalam Kehidupan</h2>
+                        <ul className="zakat-list">
+                        <li><strong>Spiritual:</strong> Menyucikan harta dan jiwa dari sifat kikir.</li>
+                        <li><strong>Sosial:</strong> Mengurangi kesenjangan ekonomi dan membantu fakir miskin.</li>
+                        <li><strong>Ekonomi:</strong> Meningkatkan perputaran ekonomi dalam masyarakat.</li>
+                        </ul>
+                    </section>
+            
+                    <section className="kesimpulan">
+                        <h2>Kesimpulan</h2>
+                        <p className="zakat-text">
+                        Zakat bukan sekadar kewajiban, tetapi juga merupakan instrumen sosial yang dapat menyejahterakan masyarakat. 
+                        Dengan memahami dan menunaikan zakat, kita tidak hanya membersihkan harta tetapi juga berkontribusi dalam menciptakan 
+                        keseimbangan ekonomi dan keadilan sosial.
+                        </p>
+                    </section>
+                    </div>
                 </div>
             )}
 

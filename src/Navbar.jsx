@@ -11,16 +11,16 @@ function Navbar() {
 				<a href="">
 					<img src={infaqImage} alt="cek" />
 				</a>
-				<a class="a" href="index.html">
+				<a className="a" href="index.html">
 					Beranda
 				</a>
-				<a class="b" href="calculator.html">
+				<a className="b" href="calculator.html">
 					Kalkulator
 				</a>
-				<a class="c" href="modul.html">
+				<a className="c" href="modul.html">
 					Pembelajaran
 				</a>
-				<div class="navbar-menu">
+				<div className="navbar-menu">
 					<a href="#" id="menu-icon">
 						<img src="images/menu-w.png" alt="menu-icon" />
 					</a>
