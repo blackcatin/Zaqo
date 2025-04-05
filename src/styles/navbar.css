@@ -1,6 +1,7 @@
 :root {
-    --blue: rgb(68, 165, 182);
-    --gold: rgb(237, 201, 179);
+
+    --blue: #309b9b;
+    --gold: #edc9b3;
     --white: #ffffff;
 }
 
