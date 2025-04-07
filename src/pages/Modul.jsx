@@ -1,6 +1,6 @@
 import { useState } from "react";
-import './styles/modul.css';
-import infaqImage from './assets/infaq.jpg';
+import './../styles/modul.css';
+import infaqImage from './../assets/infaq.jpg';
 
 
 function Modul() {
