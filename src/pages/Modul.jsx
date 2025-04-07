@@ -2,9 +2,52 @@ import { useState } from "react";
 import './../styles/modul.css';
 import infaqImage from './../assets/infaq.jpg';
 
-
 function Modul() {
     const [currentPage, setCurrentPage] = useState("modul"); 
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [score, setScore] = useState(0);
+    const [showResult, setShowResult] = useState(false);
+    const quizQuestions = [
+        {
+          question: "Siapa saja yang wajib menunaikan zakat?",
+          options: [
+            { text: "A. Semua orang", isCorrect: false },
+            { text: "B. Non-Muslim", isCorrect: false },
+            { text: "C. Muslim yang berakal dan merdeka", isCorrect: true }
+          ]
+        },
+        {
+          question: "Apa hukum zakat dalam Islam?",
+          options: [
+            { text: "A. Sunnah", isCorrect: false },
+            { text: "B. Wajib", isCorrect: true },
+            { text: "C. Mubah", isCorrect: false }
+          ]
+        }
+      ];
+    
+      const handleAnswer = (isCorrect) => {
+        if (isCorrect) {
+          setScore(score + 1);
+          alert("Jawaban benar!");
+        } else {
+          alert("Jawaban salah!");
+        }
+    
+        const nextQuestion = currentQuestionIndex + 1;
+        if (nextQuestion < quizQuestions.length) {
+          setCurrentQuestionIndex(nextQuestion);
+        } else {
+          setShowResult(true);
+        }
+      };
+
+    const resetQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setShowResult(false);
+    };
+
     return (
         <div className="modul-container">
             {currentPage !== "modul" && (
@@ -40,7 +83,7 @@ function Modul() {
 
             {currentPage === "zakat" && (
                 <div className="modul-page">
-                    <h1>Pengantar Zakat</h1>
+                    <h1 >Pengantar Zakat</h1>
                     <div className="zakat-content">
                     <section>
                         <h2>1. Konsep Dasar Zakat</h2>
@@ -89,8 +132,41 @@ function Modul() {
                         keseimbangan ekonomi dan keadilan sosial.
                         </p>
                     </section>
+
+                    <div className="quiz-link fade-transition">
+                    <button onClick={() => {
+                        resetQuiz();
+                        setCurrentPage("quizZakat");
+                    }}>
+                        🎯 Yuk, Uji Pemahamanmu tentang Zakat!
+                    </button>
+                    </div>
                     </div>
                 </div>
+            )}
+
+            {currentPage === "quizZakat" && (
+            <div className="quiz">
+                <h2>Quiz: Pengantar Zakat</h2>
+                {showResult ? (
+                <div>
+                    <p>Skor akhir kamu: {score} dari {quizQuestions.length}</p>
+                </div>
+                ) : (
+                <div>
+                    <p>{quizQuestions[currentQuestionIndex].question}</p>
+                    <ul>
+                    {quizQuestions[currentQuestionIndex].options.map((option, index) => (
+                        <li key={index}>
+                        <button onClick={() => handleAnswer(option.isCorrect)}>
+                            {option.text}
+                        </button>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
+                )}
+            </div>
             )}
 
             {currentPage === "jenisZakat" && (

@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 70px 20px;
+    border-radius: 20px;
 }
 
 .back-btn {
@@ -51,6 +52,7 @@ body {
 
 .back-btn:hover {
     background: #e6b08f;
+    transform: scale(1.05);
 }
 
 .modul-container h1 {
@@ -86,6 +88,8 @@ body {
 .modul-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
 }
 
 .modul-card h3 {
@@ -115,60 +119,103 @@ body {
 
 .btn:hover {
     background: #e6b08f;
+    transform: scale(1.05);
 }
+
 
 .zakat-content {
     width: 90%;
     max-width: 900px; 
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
-    border-left: 6px solid var(--gold);
 }
 
-h1, h2 {
+.modul-container h1, h2 {
     color: #2c3e50;
 }
 
-h1 {
+.modul-page {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.modul-page h1 {
     text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #2c3e50;
 }
 
-h2 {
-    border-bottom: 3px solid var(--gold);
-    padding-bottom: 8px;
-    margin-top: 25px;
-    font-size: 22px;
+.modul-card,
+.zakat-content section {
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-p, ul {
+.zakat-content section {
+    background-color: #ffffff;
+    border-left: 6px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+.zakat-content section:nth-child(odd) {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.zakat-content section:nth-child(even) {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.zakat-text em {
+    background: #fff4d3;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-style: normal;
+    color: #c99200;
+    font-weight: bold;
+}
+
+.zakat-content section:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #eee;
+    margin: 25px 0;
+}
+
+.zakat-content h2 {
+    font-size: 1.65rem;
+    color: #34495e;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+.zakat-content p, ul {
     color: #555;
     font-size: 16px;
     line-height: 1.8;
-}
-
-ul {
     padding-left: 25px;
 }
 
-li {
+
+.zakat-content li {
     margin-bottom: 12px;
     list-style: none;
     position: relative;
+    text-align: left;
 }
 
-li::before {
-    content: "•";
+.zakat-content li::before {
+    content: "✓"; 
+    margin-right: 8px;
     color: var(--gold);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    font-size: 1em;
 }
 
 blockquote {
@@ -191,4 +238,96 @@ blockquote {
     color: #2c3e50;
     border-left: 5px solid var(--gold);
 }
+
+.quiz-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+.quiz-link button {
+    background-color: var(--gold);
+    color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.quiz-link button:hover {
+    background-color: #e6b08f;
+}
+
+.quiz {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+  
+.quiz h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+  
+.quiz p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .quiz ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .quiz li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quiz button {
+    background-color: var(--gold);
+    color: #2c3e50;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .quiz button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+  }
+  
+  
+  .quiz .score-result {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }  
+  
+
+  .fade-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  
 
