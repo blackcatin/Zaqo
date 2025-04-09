@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom'; // WAJIB: ganti <a> ke <Link>
+import {NavLink} from 'react-router-dom';
 import './../styles/navbar.css';
 import infaqImage from './../assets/infaq.jpg';
 import menuIcon from './../assets/menu-w.png';
@@ -10,21 +10,21 @@ function Navbar() {
 	return (
 		<nav>
 			<div className="container-navbar">
-				<Link to="/">
-					<h2 className="zaqo-title">ZAQO.</h2>
-				</Link>
-				<Link to="/" className="navbar-logo">
+				<NavLink to="/" className="zaqo-title">
+					ZAQO.
+				</NavLink>
+				<NavLink to="/" className="navbar-logo">
 					<img src={infaqImage} alt="cek" />
-				</Link>
-				<Link className="a" to="/">
+				</NavLink>
+				<NavLink className={({isActive}) => (isActive ? 'a active' : 'a')} to="/">
 					Beranda
-				</Link>
-				<Link className="b" to="/calculator">
+				</NavLink>
+				<NavLink className={({isActive}) => (isActive ? 'b active' : 'b')} to="/calculator">
 					Kalkulator
-				</Link>
-				<Link className="c" to="/modul">
+				</NavLink>
+				<NavLink className={({isActive}) => (isActive ? 'c active' : 'c')} to="/modul">
 					Pembelajaran
-				</Link>
+				</NavLink>
 			</div>
 
 			<div className="navbar-menu">
@@ -35,21 +35,21 @@ function Navbar() {
 
 			<div className={`side-navbar ${isOpen ? 'open' : ''}`}>
 				<div className="navbar-nav">
-					<Link to="/">
+					<NavLink to="/">
 						<h2>ZAQO.</h2>
-					</Link>
-					<Link to="/" className="navbar-nav-logo">
+					</NavLink>
+					<NavLink to="/" className="navbar-nav-logo">
 						<img src={infaqImage} alt="cek" />
-					</Link>
-					<Link className="a" to="/">
+					</NavLink>
+					<NavLink className="a" to="/">
 						Beranda
-					</Link>
-					<Link className="b" to="/calculator">
+					</NavLink>
+					<NavLink className="b" to="/calculator">
 						Kalkulator
-					</Link>
-					<Link className="c" to="/modul">
+					</NavLink>
+					<NavLink className="c" to="/modul">
 						Pembelajaran
-					</Link>
+					</NavLink>
 				</div>
 			</div>
 		</nav>

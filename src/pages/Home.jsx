@@ -1,44 +1,11 @@
-import { useState } from "react";
+import {useState} from 'react';
+import Hero from '../components/Hero';
 import './../styles/home.css';
 
-
 function Home() {
-    const [currentPage, setCurrentPage] = useState("modul"); 
-    return (
-        <div className="modul-container">
-            {currentPage !== "modul" && (
-                <button onClick={() => setCurrentPage("modul")} className="back-btn">←</button>
-            )}
+	const [currentPage, setCurrentPage] = useState('hero');
 
-            {currentPage === "modul" && (
-                <>
-                    <h1>Modul Pembelajaran</h1>
-                    <p>Temukan berbagai materi pembelajaran tentang zakat dan perhitungan zakat dengan mudah.</p>
-
-                </>
-            )}
-
-            {currentPage === "zakat" && (
-                <div className="modul-page">
-                    <h1>Pengantar Zakat</h1>
-                </div>
-            )}
-
-            {currentPage === "jenisZakat" && (
-                <div className="modul-page">
-                    <h1>Jenis-Jenis Zakat</h1>
-                    <p>Pelajari jenis-jenis zakat, seperti zakat fitrah, maal, profesi, dan lainnya.</p>
-                </div>
-            )}
-
-            {currentPage === "hitungZakat" && (
-                <div className="modul-page">
-                    <h1>Cara Menghitung Zakat</h1>
-                    <p>Pahami bagaimana cara menghitung zakat dengan rumus yang tepat.</p>
-                </div>
-            )}
-        </div>
-    );
+	return <Hero />;
 }
 
 export default Home;
