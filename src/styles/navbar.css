@@ -1,5 +1,4 @@
 :root {
-
     --blue: #309b9b;
     --gold: #edc9b3;
     --white: #ffffff;
@@ -43,6 +42,8 @@ nav {
     padding: 0;
     margin: 0;
     color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: underline;
 }
 
@@ -61,6 +62,28 @@ nav {
     margin: auto;
     width: 45px;
     height: auto;
+}
+
+.container-navbar .a,
+.container-navbar .b,
+.container-navbar .c {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.1rem 1rem;
+    transition: border-bottom 0.3s;
+    transition: all 0.3s ease;
+}
+
+.container-navbar .active {
+    border-bottom: 3px solid var(--gold);
+    font-weight: 600;
+}
+
+.container-navbar .a:hover,
+.container-navbar .b:hover,
+.container-navbar .c:hover {
+    transform: scale(1.1);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
 
 /* Tombol Menu */
