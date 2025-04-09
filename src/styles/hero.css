@@ -2,11 +2,12 @@
     --blue: #4dc3c3;
     --gold: #edc9b3;
     --white: #ffffff;
+    --darkblue: #2c3e50;
 }
 
 .hero-container {
-    width: 100%;
-    max-width: 1400px;
+    width: 80%;
+    margin: auto;
     text-align: center;
     background: var(--blue);
     display: flex;
@@ -18,8 +19,8 @@
 }
 
 .hero-main h1 {
-    color: var(--white);
     font-size: 3rem;
+    color: var(--darkblue);
 }
 
 .hero-main h3 {
