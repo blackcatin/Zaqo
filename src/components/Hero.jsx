@@ -45,7 +45,7 @@ function Hero() {
 						<div
 							key={card.id}
 							className="carousel-card"
-							style={{transform: `rotateY(${i * angle}deg) translateZ(300px)`}}
+							style={{transform: `rotateY(${i * angle}deg) translateZ(240px)`}}
 						>
 							<h2>
 								{card.title}
