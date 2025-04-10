@@ -67,6 +67,8 @@
     text-align: center;
     padding: 20px;
     backface-visibility: hidden;
+    border-left: 6px solid var(--gold);
+    border-right: 6px solid var(--gold);
 }
 
 .controls {
