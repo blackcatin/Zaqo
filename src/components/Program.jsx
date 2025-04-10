@@ -1,6 +1,9 @@
 import { useState } from "react";
 import './../styles/program.css';
-import infaqImage from './../assets/infaq.jpg';
+import programBansos from './../assets/program-bansos.jpg';
+import programBeasiswa from './../assets/program-beasiswa.jpg';
+import programBencana from './../assets/program-bencana.jpg';
+import programKesehatan from './../assets/program-kesehatan.jpg';
 
 
 function Program() {
@@ -13,26 +16,32 @@ function Program() {
 
             {currentPage === "program" && (
                 <>
-                    <h1>Modul Pembelajaran</h1>
-                    <p>Temukan berbagai materi pembelajaran tentang zakat dan perhitungan zakat dengan mudah.</p>
+                    <h1>Program Kami</h1>
+                    <p>Penasaran kemana zakat ini akan disalurkan? Yuk cek program-program kami berikut!</p>
 
                     <div className="program-list">
                         <div className="program-card">
-                            <h3>Modul 1: Pengantar Zakat</h3>
-                            <p>Pahami konsep dasar zakat, hukum, dan manfaatnya dalam kehidupan.</p>
-                            <button onClick={() => setCurrentPage("zakat")} className="btn">Baca Modul</button>
+                            <h3>Program Bantuan Sosial</h3>
+                            <img src={programBansos} alt="" />
+                            <button onClick={() => setCurrentPage("zakat")} className="btn">Lihat Program</button>
                         </div>
 
                         <div className="program-card">
-                            <h3>Modul 2: Jenis-jenis Zakat</h3>
-                            <p>Pelajari jenis-jenis zakat, seperti zakat fitrah, maal, profesi, dan lainnya.</p>
-                            <button onClick={() => setCurrentPage("jenisZakat")} className="btn">Baca Modul</button>
+                            <h3>Program Bantuan Bencana</h3>
+                            <img src={programBencana} alt="" />
+                            <button onClick={() => setCurrentPage("jenisZakat")} className="btn">Lihat Program</button>
                         </div>
 
                         <div className="program-card">
-                            <h3>Modul 3: Cara Menghitung Zakat</h3>
-                            <p>Pahami bagaimana cara menghitung zakat dengan rumus yang tepat.</p>
-                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Baca Modul</button>
+                            <h3>Program Bantuan Kesehatan</h3>
+                            <img src={programKesehatan} alt="" />
+                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
+                        </div>
+
+                        <div className="program-card">
+                            <h3>Program Bantuan Beasiswa</h3>
+                            <img src={programBeasiswa} alt="" />
+                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
                         </div>
                     </div>
                 </>

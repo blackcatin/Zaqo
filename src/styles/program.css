@@ -62,7 +62,7 @@
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 15px;
     width: 280px;
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -80,11 +80,9 @@
     text-align: center;
 }
 
-.program-card p {
-    font-size: 1rem;
-    color: #383838;
-    margin-bottom: 15px;
-    text-align: center;
+.program-card img {
+    width: 250px;
+    border-radius: 10px;
 }
 
 .btn {
