@@ -5,7 +5,7 @@
     --darkblue: #2c3e50;
 }
 
-.program-container {
+.layanan-container {
     width: 80%;
     margin: auto;
     text-align: center;
@@ -39,19 +39,19 @@
     background: #e6b08f;
 }
 
-.program-container h1 {
+.layanan-container h1 {
     font-size: 2rem;
     color: var(--darkblue);
     margin-bottom: 10px;
 }
 
-.program-container p {
+.layanan-container p {
     font-size: 1.1rem;
     color: var(--white);
     margin-bottom: 20px;
 }
 
-.program-list {
+.layanan-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -59,36 +59,36 @@
     padding-bottom: 20px;
 }
 
-.program-card {
+.layanan-card {
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 280px;
+    padding: 10px 0px;
+    width: 360px;
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-left: 4px solid var(--gold);
     border-right: 4px solid var(--gold);
 }
 
-.program-card:hover {
+.layanan-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-.program-card h3 {
+.layanan-card h3 {
     font-size: 1.4rem;
     color: var(--blue);
     margin-bottom: 10px;
     text-align: center;
 }
 
-.program-card img {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(73, 52, 28, 0.5);
-    border-left: 4px solid var(--gold);
-    border-right: 4px solid var(--gold);
+.layanan-card img {
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(73, 52, 28, 0.5);
+    border-left: 3px solid var(--gold);
+    border-right: 3px solid var(--gold);
 }
 
 .btn {
