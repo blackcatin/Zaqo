@@ -3,6 +3,7 @@ import './../styles/layanan.css';
 import chatIcon from './../assets/chat-icon.png';
 import newsIcon from './../assets/news-icon.png';
 import calculatorIcon from './../assets/calculator-icon.png';
+import modulIcon from './../assets/modul-icon.png';
 
 function Layanan() {
     const [currentPage, setCurrentPage] = useState("layanan");
@@ -19,27 +20,35 @@ function Layanan() {
 
                     <div className="layanan-list">
                         <div className="layanan-card">
-                            <h3>Donature Care</h3>
                             <img src={chatIcon} alt="" />
-                            <button onClick={() => setCurrentPage("zakat")} className="btn">Lihat Program</button>
+                            <div className="layanan-card-detail">
+                                <h3>Donature Care</h3>
+                                <h5>Mari berbincang lebih lengkap terkait program & layanan kami.</h5>
+                            </div>
                         </div>
 
                         <div className="layanan-card">
-                            <h3>Berita Donasi</h3>
                             <img src={newsIcon} alt="" />
-                            <button onClick={() => setCurrentPage("jenisZakat")} className="btn">Lihat Program</button>
+                            <div className="layanan-card-detail">
+                                <h3>Berita Donasi</h3>
+                                <h5>Ikuti berita donasi dan berita lainnya terkait zakat!</h5>
+                            </div>
                         </div>
 
                         <div className="layanan-card">
-                            <h3>Kalkulator Zakat</h3>
                             <img src={calculatorIcon} alt="" />
-                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
+                            <div className="layanan-card-detail">
+                                <h3>Kalkulator Zakat</h3>
+                                <h5>Hitung secara akurat zakat yang akan dibayar dengan mudah!</h5>
+                            </div>
                         </div>
 
                         <div className="layanan-card">
-                            <h3>Kalkulator Zakat</h3>
-                            <img src={calculatorIcon} alt="" />
-                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
+                            <img src={modulIcon} alt="" />
+                            <div className="layanan-card-detail">
+                                <h3>Modul Pembelajaran</h3>
+                                <h5>Tertarik dengan zakat? Mari belajar dengan modul lengkap</h5>
+                            </div>
                         </div>
                     </div>
                 </>
@@ -53,13 +62,13 @@ function Layanan() {
 
             {currentPage === "jenisZakat" && (
                 <div className="layanan-page">
-                    <h1>Jenis-Jenis Zakat</h1>                  
+                    <h1>Jenis-Jenis Zakat</h1>
                 </div>
             )}
 
             {currentPage === "hitungZakat" && (
                 <div className="layanan-page">
-                    <h1>Cara Menghitung Zakat</h1>                  
+                    <h1>Cara Menghitung Zakat</h1>
                 </div>
             )}
         </div>

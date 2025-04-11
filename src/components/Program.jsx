@@ -5,7 +5,6 @@ import programBeasiswa from './../assets/program-beasiswa.jpg';
 import programBencana from './../assets/program-bencana.jpg';
 import programKesehatan from './../assets/program-kesehatan.jpg';
 
-
 function Program() {
     const [currentPage, setCurrentPage] = useState("program");
     return (
@@ -55,13 +54,13 @@ function Program() {
 
             {currentPage === "jenisZakat" && (
                 <div className="program-page">
-                    <h1>Jenis-Jenis Zakat</h1>                  
+                    <h1>Jenis-Jenis Zakat</h1>
                 </div>
             )}
 
             {currentPage === "hitungZakat" && (
                 <div className="program-page">
-                    <h1>Cara Menghitung Zakat</h1>                  
+                    <h1>Cara Menghitung Zakat</h1>
                 </div>
             )}
         </div>

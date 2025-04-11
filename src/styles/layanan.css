@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 70px 20px;
+    margin-bottom: 20px;
 }
 
 .back-btn {
@@ -56,6 +57,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 60%;
     padding-bottom: 20px;
 }
 
@@ -63,9 +65,13 @@
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 0px;
-    width: 360px;
+    padding: 10px 20px;
+    width: 400px;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-left: 4px solid var(--gold);
     border-right: 4px solid var(--gold);
@@ -76,19 +82,27 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
+.layanan-card-detail {
+    margin: auto;
+}
+
 .layanan-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--blue);
-    margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.layanan-card h5 {
+    font-weight: 500;
+    text-align: justify;
+    padding-left: 20px;
 }
 
 .layanan-card img {
     width: 70px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(73, 52, 28, 0.5);
-    border-left: 3px solid var(--gold);
-    border-right: 3px solid var(--gold);
 }
 
 .btn {

@@ -1,15 +1,14 @@
-import {Children, useState} from 'react';
+import { Children, useState } from 'react';
 import './../styles/hero.css';
-// import {TiChevronLeftOutline, TiChevronRighttOutline} from 'https://cdn.skypack.dev/react-icons/ti';
 
 function Hero() {
 	const [currentPage, setCurrentPage] = useState('hero');
 	const cards = [
-		{id: 1, title: 'Card 1', content: 'Ini konten kartu 1'},
-		{id: 2, title: 'Card 2', content: 'Ini konten kartu 2'},
-		{id: 3, title: 'Card 3', content: 'Ini konten kartu 3'},
-		{id: 4, title: 'Card 4', content: 'Ini konten kartu 4'},
-		{id: 5, title: 'Card 5', content: 'Ini konten kartu 5'},
+		{ id: 1, title: 'Card 1', content: 'Ini konten kartu 1' },
+		{ id: 2, title: 'Card 2', content: 'Ini konten kartu 2' },
+		{ id: 3, title: 'Card 3', content: 'Ini konten kartu 3' },
+		{ id: 4, title: 'Card 4', content: 'Ini konten kartu 4' },
+		{ id: 5, title: 'Card 5', content: 'Ini konten kartu 5' },
 	];
 
 	const [current, setCurrent] = useState(0);
@@ -39,13 +38,13 @@ function Hero() {
 			<div className="carousel-wrapper">
 				<div
 					className="carousel"
-					style={{transform: `translateZ(-300px) rotateY(-${current * angle}deg)`}}
+					style={{ transform: `translateZ(-300px) rotateY(-${current * angle}deg)` }}
 				>
 					{cards.map((card, i) =>
 						<div
 							key={card.id}
 							className="carousel-card"
-							style={{transform: `rotateY(${i * angle}deg) translateZ(240px)`}}
+							style={{ transform: `rotateY(${i * angle}deg) translateZ(240px)` }}
 						>
 							<h2>
 								{card.title}
