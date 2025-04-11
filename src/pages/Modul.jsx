@@ -43,22 +43,45 @@ function Modul() {
                     <h1>Pengantar Zakat</h1>
                     <div className="zakat-content">
                         <div className="sub-bab">
-                            <h2>1. Bab 1</h2>
+                            <h2>1. Konsep Dasar Zakat</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa eveniet maxime quasi excepturi odit amet, tempora neque quaerat quibusdam voluptates id rerum voluptatibus accusantium, atque optio qui earum sit?
+                            Zakat adalah salah satu rukun Islam yang wajib ditunaikan oleh setiap
+                        Muslim yang memenuhi syarat. Secara bahasa, zakat berarti <em>bersih, tumbuh, dan berkembang</em>, 
+                        sedangkan secara istilah, zakat adalah kewajiban mengeluarkan sebagian harta kepada kelompok 
+                        yang berhak menerimanya sesuai ketentuan syariat Islam.
                             </p>
                         </div>
 
-                        <div className="sub-bab">
-                            <h2>2. Bab 2</h2>
-                            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dolores eos quia excepturi, maxime, exercitationem perferendis consectetur vero dolorem doloribus suscipit odio sunt aliquam explicabo, voluptatum fugit ipsa necessitatibus harum.</p>
+                        <div className="quote-card">
+                            <p className="arabic-text">مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ</p>
+                            <p className="translation-text">“Barang siapa yang menunjukkan kepada kebaikan, maka ia akan mendapatkan pahala seperti orang yang melakukannya.”</p>
+                            <p className="source-text">(HR. Muslim, no. 1893)</p>
                         </div>
 
                         <div className="sub-bab">
-                            <h2>3. Bab 3</h2>
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit eligendi corporis debitis error necessitatibus magnam quam dicta enim eveniet exercitationem ab delectus praesentium cum nulla, unde accusantium provident id?</p>
+                            <h2>2. Hukum Zakat</h2>
+                            <p >Zakat hukumnya <strong>wajib</strong> bagi Muslim yang memenuhi syarat:</p>
+                            <ul className="zakat-list">
+                            <li><strong>Islam</strong> – Hanya diwajibkan bagi umat Islam.</li>
+                            <li><strong>Merdeka</strong> – Orang yang merdeka berkewajiban menunaikan zakat.</li>
+                            <li><strong>Berakal dan Baligh</strong> – Diperuntukkan bagi yang sudah dewasa dan berakal sehat.</li>
+                            <li><strong>Memiliki harta yang mencapai nisab dan haul</strong>.</li>
+                            </ul>
                         </div>
 
+                        <div className="blockquote">
+                            <p><strong>QS. At-Taubah: 103</strong></p>
+                            <p>"Ambillah zakat dari sebagian harta mereka, dengan zakat itu kamu membersihkan dan menyucikan mereka..."</p>
+                        </div>
+
+                        <div className="sub-bab">
+                            <h2>3. Manfaat Zakat</h2>
+                           <ul className="zakat-list">
+                           <li><strong>Spiritual:</strong> Menyucikan harta dan jiwa dari sifat kikir.</li>
+                            <li><strong>Sosial:</strong> Mengurangi kesenjangan ekonomi dan membantu fakir miskin.</li>
+                            <li><strong>Ekonomi:</strong> Meningkatkan perputaran ekonomi dalam masyarakat.</li>
+                           </ul>
+                        </div>
                     </div>
                 </div>
             )}
@@ -69,22 +92,45 @@ function Modul() {
                     <h1>Jenis-Jenis Zakat</h1>
                     <div className="zakat-content">
                         <div className="sub-bab">
-                            <h2>1. Bab 1</h2>
+                            <h2>1. Konsep Dasar Zakat</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa eveniet maxime quasi excepturi odit amet, tempora neque quaerat quibusdam voluptates id rerum voluptatibus accusantium, atque optio qui earum sit?
+                            Zakat adalah salah satu rukun Islam yang wajib ditunaikan oleh setiap
+                        Muslim yang memenuhi syarat. Secara bahasa, zakat berarti <em>bersih, tumbuh, dan berkembang</em>, 
+                        sedangkan secara istilah, zakat adalah kewajiban mengeluarkan sebagian harta kepada kelompok 
+                        yang berhak menerimanya sesuai ketentuan syariat Islam.
                             </p>
                         </div>
 
-                        <div className="sub-bab">
-                            <h2>2. Bab 2</h2>
-                            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dolores eos quia excepturi, maxime, exercitationem perferendis consectetur vero dolorem doloribus suscipit odio sunt aliquam explicabo, voluptatum fugit ipsa necessitatibus harum.</p>
+                        <div className="quote-card">
+                            <p className="arabic-text">مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ</p>
+                            <p className="translation-text">“Barang siapa yang menunjukkan kepada kebaikan, maka ia akan mendapatkan pahala seperti orang yang melakukannya.”</p>
+                            <p className="source-text">(HR. Muslim, no. 1893)</p>
                         </div>
 
                         <div className="sub-bab">
-                            <h2>3. Bab 3</h2>
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit eligendi corporis debitis error necessitatibus magnam quam dicta enim eveniet exercitationem ab delectus praesentium cum nulla, unde accusantium provident id?</p>
+                            <h2>2. Hukum Zakat</h2>
+                            <p >Zakat hukumnya <strong>wajib</strong> bagi Muslim yang memenuhi syarat:</p>
+                            <ul className="zakat-list">
+                            <li><strong>Islam</strong> – Hanya diwajibkan bagi umat Islam.</li>
+                            <li><strong>Merdeka</strong> – Orang yang merdeka berkewajiban menunaikan zakat.</li>
+                            <li><strong>Berakal dan Baligh</strong> – Diperuntukkan bagi yang sudah dewasa dan berakal sehat.</li>
+                            <li><strong>Memiliki harta yang mencapai nisab dan haul</strong>.</li>
+                            </ul>
                         </div>
 
+                        <div className="blockquote">
+                            <p><strong>QS. At-Taubah: 103</strong></p>
+                            <p>"Ambillah zakat dari sebagian harta mereka, dengan zakat itu kamu membersihkan dan menyucikan mereka..."</p>
+                        </div>
+
+                        <div className="sub-bab">
+                            <h2>3. Manfaat Zakat</h2>
+                           <ul>
+                           <li><strong>Spiritual:</strong> Menyucikan harta dan jiwa dari sifat kikir.</li>
+                            <li><strong>Sosial:</strong> Mengurangi kesenjangan ekonomi dan membantu fakir miskin.</li>
+                            <li><strong>Ekonomi:</strong> Meningkatkan perputaran ekonomi dalam masyarakat.</li>
+                           </ul>
+                        </div>
                     </div>
                 </div>
             )}
@@ -94,22 +140,45 @@ function Modul() {
                     <h1>Cara Menghitung Zakat</h1>
                     <div className="zakat-content">
                         <div className="sub-bab">
-                            <h2>1. Bab 1</h2>
+                            <h2>1. Konsep Dasar Zakat</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa eveniet maxime quasi excepturi odit amet, tempora neque quaerat quibusdam voluptates id rerum voluptatibus accusantium, atque optio qui earum sit?
+                            Zakat adalah salah satu rukun Islam yang wajib ditunaikan oleh setiap
+                        Muslim yang memenuhi syarat. Secara bahasa, zakat berarti <em>bersih, tumbuh, dan berkembang</em>, 
+                        sedangkan secara istilah, zakat adalah kewajiban mengeluarkan sebagian harta kepada kelompok 
+                        yang berhak menerimanya sesuai ketentuan syariat Islam.
                             </p>
                         </div>
 
-                        <div className="sub-bab">
-                            <h2>2. Bab 2</h2>
-                            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dolores eos quia excepturi, maxime, exercitationem perferendis consectetur vero dolorem doloribus suscipit odio sunt aliquam explicabo, voluptatum fugit ipsa necessitatibus harum.</p>
+                        <div className="quote-card">
+                            <p className="arabic-text">مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ</p>
+                            <p className="translation-text">“Barang siapa yang menunjukkan kepada kebaikan, maka ia akan mendapatkan pahala seperti orang yang melakukannya.”</p>
+                            <p className="source-text">(HR. Muslim, no. 1893)</p>
                         </div>
 
                         <div className="sub-bab">
-                            <h2>3. Bab 3</h2>
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit eligendi corporis debitis error necessitatibus magnam quam dicta enim eveniet exercitationem ab delectus praesentium cum nulla, unde accusantium provident id?</p>
+                            <h2>2. Hukum Zakat</h2>
+                            <p >Zakat hukumnya <strong>wajib</strong> bagi Muslim yang memenuhi syarat:</p>
+                            <ul className="zakat-list">
+                            <li><strong>Islam</strong> – Hanya diwajibkan bagi umat Islam.</li>
+                            <li><strong>Merdeka</strong> – Orang yang merdeka berkewajiban menunaikan zakat.</li>
+                            <li><strong>Berakal dan Baligh</strong> – Diperuntukkan bagi yang sudah dewasa dan berakal sehat.</li>
+                            <li><strong>Memiliki harta yang mencapai nisab dan haul</strong>.</li>
+                            </ul>
                         </div>
 
+                        <div className="blockquote">
+                            <p><strong>QS. At-Taubah: 103</strong></p>
+                            <p>"Ambillah zakat dari sebagian harta mereka, dengan zakat itu kamu membersihkan dan menyucikan mereka..."</p>
+                        </div>
+
+                        <div className="sub-bab">
+                            <h2>3. Manfaat Zakat</h2>
+                           <ul>
+                           <li><strong>Spiritual:</strong> Menyucikan harta dan jiwa dari sifat kikir.</li>
+                            <li><strong>Sosial:</strong> Mengurangi kesenjangan ekonomi dan membantu fakir miskin.</li>
+                            <li><strong>Ekonomi:</strong> Meningkatkan perputaran ekonomi dalam masyarakat.</li>
+                           </ul>
+                        </div>
                     </div>
                 </div>
             )}

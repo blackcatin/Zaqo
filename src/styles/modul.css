@@ -30,6 +30,7 @@ body {
     justify-content: flex-start;
     padding: 70px 20px;
     border-radius: 20px;
+    
 }
 
 .back-btn {
@@ -82,6 +83,8 @@ body {
     padding: 20px;
     width: 280px;
     text-align: center;
+    border-left: 6px solid var(--gold);
+    border-right: 6px solid var(--gold);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -132,6 +135,7 @@ body {
     margin-top: 20px;
     width: 100%;
     max-width: 800px;
+    border-right: 6px solid var(--gold);
     background-color: var(--white);
     padding: 30px;
     border-radius: 15px;
@@ -157,6 +161,75 @@ body {
     color: #444;
     line-height: 1.6;
 }
+
+.zakat-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.zakat-list li {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.blockquote {
+    position: relative;
+    margin: 30px auto;
+    padding: 10px 0;
+    font-style: italic;
+    color: #444;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.blockquote p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.blockquote::before,
+.blockquote::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 10px auto;
+}
+
+
+.quote-card {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+.quote-card .arabic-text {
+    font-size: 1.6rem;
+    font-family: 'Amiri', serif;
+    color: #2c3e50;
+    direction: rtl;
+    margin-bottom: 12px;
+}
+
+.quote-card .translation-text {
+    font-size: 1.1rem;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    padding: 0 10px;
+}
+
+.quote-card .source-text {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .modul-list {

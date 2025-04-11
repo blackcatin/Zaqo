@@ -1,43 +1,52 @@
-import { useState } from "react";
-import './../styles/home.css';
+import { useNavigate } from "react-router-dom";
+import "./../styles/calculator.css";
+import zakatFitra from './../assets/zakat-fitra.jpeg'; 
+import zakatMaal from './../assets/zakat-maal.jpeg'
 
 
-function Calculator() {
-    const [currentPage, setCurrentPage] = useState("modul"); 
-    return (
-        <div className="modul-container">
-            {currentPage !== "modul" && (
-                <button onClick={() => setCurrentPage("modul")} className="back-btn">←</button>
-            )}
+const ZakatSelector = () => {
+  const navigate = useNavigate();
 
-            {currentPage === "modul" && (
-                <>
-                    <h1>Modul Pembelajaran</h1>
-                    <p>Temukan berbagai materi pembelajaran tentang zakat dan perhitungan zakat dengan mudah.</p>
-                </>
-            )}
+  const handleRedirect = (path) => {
+    navigate(path);
+  };
 
-            {currentPage === "zakat" && (
-                <div className="modul-page">
-                    <h1>Pengantar Zakat</h1>
-                </div>
-            )}
+  return (
+    <div className="zakat-selector-container">
+      <h2 className="zakat-title">Kalkulator Zakat Online</h2>
+      <p className="zakat-subtitle">Pilih jenis zakat yang ingin kamu hitung! 🧮</p>
 
-            {currentPage === "jenisZakat" && (
-                <div className="modul-page">
-                    <h1>Jenis-Jenis Zakat</h1>
-                    <p>Pelajari jenis-jenis zakat, seperti zakat fitrah, maal, profesi, dan lainnya.</p>
-                </div>
-            )}
-
-            {currentPage === "hitungZakat" && (
-                <div className="modul-page">
-                    <h1>Cara Menghitung Zakat</h1>
-                    <p>Pahami bagaimana cara menghitung zakat dengan rumus yang tepat.</p>
-                </div>
-            )}
+      <div className="zakat-box-wrapper">
+        <div
+          onClick={() => handleRedirect('/kalkulator/zakat-maal')}
+          className="zakat-box"
+        >
+          <div className="zakat-icon">
+          <img src={zakatMaal} alt="Ikon Zakat Maal" className="zakat-img" />
+          </div>
+          <h3 className="zakat-box-title">Zakat Maal</h3>
+          <p className="zakat-box-desc">
+            Zakat atas harta simpanan seperti tabungan, emas, saham, dan lainnya
+            yang telah mencapai nisab dan haul.
+          </p>
         </div>
-    );
-}
 
-export default Calculator;
+        <div
+          onClick={() => handleRedirect('/kalkulator/zakat-fitrah')}
+          className="zakat-box"
+        >
+          <div className="zakat-icon">
+          <img src={zakatFitra} alt="Ikon Zakat Maal" className="zakat-img" />
+          </div>
+          <h3 className="zakat-box-title">Zakat Fitrah</h3>
+          <p className="zakat-box-desc">
+            Zakat wajib yang dikeluarkan menjelang Idul Fitri, biasanya berupa beras
+            atau uang senilai makanan pokok.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ZakatSelector;
