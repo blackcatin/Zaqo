@@ -76,7 +76,7 @@ function Modul() {
 
                         <div className="sub-bab">
                             <h2>3. Manfaat Zakat</h2>
-                           <ul>
+                           <ul className="zakat-list">
                            <li><strong>Spiritual:</strong> Menyucikan harta dan jiwa dari sifat kikir.</li>
                             <li><strong>Sosial:</strong> Mengurangi kesenjangan ekonomi dan membantu fakir miskin.</li>
                             <li><strong>Ekonomi:</strong> Meningkatkan perputaran ekonomi dalam masyarakat.</li>

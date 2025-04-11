@@ -30,6 +30,7 @@ body {
     justify-content: flex-start;
     padding: 70px 20px;
     border-radius: 20px;
+    
 }
 
 .back-btn {
@@ -82,6 +83,8 @@ body {
     padding: 20px;
     width: 280px;
     text-align: center;
+    border-left: 6px solid var(--gold);
+    border-right: 6px solid var(--gold);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -132,6 +135,7 @@ body {
     margin-top: 20px;
     width: 100%;
     max-width: 800px;
+    border-right: 6px solid var(--gold);
     background-color: var(--white);
     padding: 30px;
     border-radius: 15px;
