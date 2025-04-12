@@ -47,27 +47,30 @@ function News() {
 
     return (
         <div className="news-container">
-            <div className="headline-container">
-                <div className="headline-title">
-                    <span className='tag'>{headline.tag}</span>
-                    <h3>{headline.title}</h3>
-                    <p>{headline.description}</p>
+            <h2>Zaqo News</h2>
+            <div className="news-box">
+                <div className="headline-container">
+                    <div className="headline-title">
+                        <span className='tag'>{headline.tag}</span>
+                        <h3>{headline.title}</h3>
+                        <p>{headline.description}</p>
+                    </div>
+                    <img src={headline.image} alt={headline.title} />
                 </div>
-                <img src={headline.image} alt={headline.title} />
-            </div>
-            <div className="news-cards">
-                <h4>TERPOPULER</h4>
-                <ul>
-                    {newsData.map((news, idx) => (
-                        <li key={idx} className='news-card'>
-                            <span className='index'>{String(idx + 1).padStart(2, '0')}</span>
-                            <div>
-                                <p className='title'>{news.title}</p>
-                                <p className='tag'>{news.tag}</p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                <div className="news-cards">
+                    <h4>TERPOPULER</h4>
+                    <ul>
+                        {newsData.map((news, idx) => (
+                            <li key={idx} className='news-card'>
+                                <span className='index'>{String(idx + 1).padStart(2, '0')}</span>
+                                <div>
+                                    <p className='title'>{news.title}</p>
+                                    <p className='tag'>{news.tag}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );

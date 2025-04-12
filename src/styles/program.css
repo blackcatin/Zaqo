@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 70px 20px;
+    margin-bottom: 20px;
 }
 
 .back-btn {
@@ -39,7 +40,7 @@
     background: #e6b08f;
 }
 
-.program-container h1 {
+.program-container h2 {
     font-size: 2rem;
     color: var(--darkblue);
     margin-bottom: 10px;
