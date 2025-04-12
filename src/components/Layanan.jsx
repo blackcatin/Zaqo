@@ -15,7 +15,7 @@ function Layanan() {
 
             {currentPage === "layanan" && (
                 <>
-                    <h1>Layanan Kami</h1>
+                    <h2>Layanan Kami</h2>
                     <p></p>
 
                     <div className="layanan-list">

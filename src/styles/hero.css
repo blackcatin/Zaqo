@@ -17,6 +17,11 @@
     padding: 70px 20px;
     height: 80vh;
     margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-main {
+    width: 120%;
 }
 
 .hero-main h1 {
@@ -27,6 +32,9 @@
 .hero-main h3 {
     color: var(--white);
     font-weight: 400;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
 }
 
 .hero-button button {

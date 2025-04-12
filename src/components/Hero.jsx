@@ -27,8 +27,10 @@ function Hero() {
 			<div className="hero-main">
 				<h1>ZAQO.</h1>
 				<h3>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi facere alias quis, eum
-					debitis consequatur pariatur tempore voluptas quam expedita!
+					ZAQO adalah lembaga amil zakat nasional milik masyarakat Indonesia
+					yang mengelola zakat, infak, sedekah, serta dana kemanusiaan lainnya melalui
+					serangkaian program terintegrasi di bidang pendidikan, kesehatan, ekonomi, dan lingkungan,
+					untuk mewujudkan kebahagiaan masyarakat yang membutuhkan.
 				</h3>
 				<div className="hero-button">
 					<button className="kalkulator-button">Kalkulator</button>

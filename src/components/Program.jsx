@@ -15,7 +15,7 @@ function Program() {
 
             {currentPage === "program" && (
                 <>
-                    <h1>Program Kami</h1>
+                    <h2>Program Kami</h2>
                     <p>Penasaran kemana zakat ini akan disalurkan? Yuk cek program-program kami berikut!</p>
 
                     <div className="program-list">

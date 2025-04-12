@@ -40,7 +40,7 @@
     background: #e6b08f;
 }
 
-.layanan-container h1 {
+.layanan-container h2 {
     font-size: 2rem;
     color: var(--darkblue);
     margin-bottom: 10px;
@@ -57,7 +57,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    width: 60%;
+    width: 80%;
     padding-bottom: 20px;
 }
 

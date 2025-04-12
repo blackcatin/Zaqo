@@ -16,7 +16,7 @@ nav {
     bottom: 10px;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 999;
     border-radius: 2rem;
     border: 3px solid var(--gold);
     background-color: var(--blue);
