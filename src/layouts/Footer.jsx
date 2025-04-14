@@ -18,37 +18,38 @@ function Footer() {
                     </p>
                     <div className="footer-contact">
                         <table>
-                            <tr>
-                                <td><strong>Kantor Pusat:</strong></td>
-                                <td>:</td>
-                                <td>Jl.Semesta Teknik No.0 Bandung</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Telp:</strong></td>
-                                <td>:</td>
-                                <td>022-732-3400</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Whatsapp:</strong></td>
-                                <td>:</td>
-                                <td>0815 7300 1555</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Email:</strong> </td>
-                                <td>:</td>
-                                <td>zaqoofficial@hotmail.com</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Kantor Pusat:</strong></td>
+                                    <td>:</td>
+                                    <td>Jl.Semesta Teknik No.0 Bandung</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Telp:</strong></td>
+                                    <td>:</td>
+                                    <td>022-732-3400</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Whatsapp:</strong></td>
+                                    <td>:</td>
+                                    <td>0815 7300 1555</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email:</strong> </td>
+                                    <td>:</td>
+                                    <td>zaqoofficial@hotmail.com</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
 
                 <div className="footer-nav">
                     <h4>Navigasi</h4>
-                    <NavLink to="">Beranda</NavLink>
-                    <NavLink to="">Program</NavLink>
-                    <NavLink to="">Pembelajaran</NavLink>
-                    <NavLink to="">Kalkulator</NavLink>
-                    <NavLink to="">Berita</NavLink>
+                    <NavLink to="/">Beranda</NavLink>
+                    <NavLink to="/modul">Pembelajaran</NavLink>
+                    <NavLink to="/calculator">Kalkulator</NavLink>
+                    <NavLink to="/newsportal">Berita</NavLink>
                 </div>
 
                 <div className="footer-sosmed">

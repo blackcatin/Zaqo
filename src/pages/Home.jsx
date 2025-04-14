@@ -3,7 +3,7 @@ import './../styles/home.css';
 import Hero from '../components/Hero';
 import Program from '../components/Program';
 import Layanan from '../components/Layanan';
-import News from '../components/News';
+import HeadlineNews from '../components/HeadlineNews';
 import Footer from '../layouts/Footer';
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
 			<Hero />
 			<Program />
 			<Layanan />
-			<News />
+			<HeadlineNews />
 			<Footer />
 		</>
 	)

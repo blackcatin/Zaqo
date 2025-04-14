@@ -3,6 +3,7 @@ import Navbar from './layouts/Navbar';
 import Home from './pages/Home';
 import Modul from './pages/Modul';
 import Calculator from './pages/Calculator';
+import NewsPortal from './pages/NewsPortal';
 import './styles/App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/modul" element={<Modul />} />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/newsportal" element={<NewsPortal />} />
         <Route path="*" element={<h1>Halaman tidak ditemukan</h1>} />
       </Routes>
     </>
