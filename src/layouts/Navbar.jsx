@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './../styles/navbar.css';
 import infaqImage from './../assets/infaq.jpg';
 import menuIcon from './../assets/menu-w.png';
@@ -16,14 +16,17 @@ function Navbar() {
 				<NavLink to="/" className="navbar-logo">
 					<img src={infaqImage} alt="cek" />
 				</NavLink>
-				<NavLink className={({isActive}) => (isActive ? 'a active' : 'a')} to="/">
+				<NavLink className={({ isActive }) => (isActive ? 'a active' : 'a')} to="/">
 					Beranda
 				</NavLink>
-				<NavLink className={({isActive}) => (isActive ? 'b active' : 'b')} to="/calculator">
+				<NavLink className={({ isActive }) => (isActive ? 'b active' : 'b')} to="/calculator">
 					Kalkulator
 				</NavLink>
-				<NavLink className={({isActive}) => (isActive ? 'c active' : 'c')} to="/modul">
+				<NavLink className={({ isActive }) => (isActive ? 'c active' : 'c')} to="/modul">
 					Pembelajaran
+				</NavLink>
+				<NavLink className={({ isActive }) => (isActive ? 'd active' : 'c')} to="/newsportal">
+					Berita
 				</NavLink>
 			</div>
 

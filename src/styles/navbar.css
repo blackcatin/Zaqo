@@ -66,7 +66,8 @@ nav {
 
 .container-navbar .a,
 .container-navbar .b,
-.container-navbar .c {
+.container-navbar .c,
+.container-navbar .d {
     text-decoration: none;
     color: #fff;
     padding: 0.1rem 1rem;
@@ -81,7 +82,8 @@ nav {
 
 .container-navbar .a:hover,
 .container-navbar .b:hover,
-.container-navbar .c:hover {
+.container-navbar .c:hover,
+.container-navbar .d:hover {
     transform: scale(1.1);
     text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
