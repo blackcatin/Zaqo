@@ -1,0 +1,51 @@
+.zakat-form-container {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 500;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  .submit-btn {
+    margin-top: 1.5rem;
+    background-color: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3baaaa;
+  }
+  
+  .divider {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
