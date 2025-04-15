@@ -1,14 +1,19 @@
 import { Children, useState } from 'react';
 import './../styles/hero.css';
+import programBansos from './../assets/program-bansos.jpg';
+import programBeasiswa from './../assets/program-beasiswa.jpg';
+import programBencana from './../assets/program-bencana.jpg';
+import programBencana2 from './../assets/program-bencana2.jpg';
+import programKesehatan from './../assets/program-kesehatan.jpg';
 
 function Hero() {
 	const [currentPage, setCurrentPage] = useState('hero');
 	const cards = [
-		{ id: 1, title: 'Card 1', content: 'Ini konten kartu 1' },
-		{ id: 2, title: 'Card 2', content: 'Ini konten kartu 2' },
-		{ id: 3, title: 'Card 3', content: 'Ini konten kartu 3' },
-		{ id: 4, title: 'Card 4', content: 'Ini konten kartu 4' },
-		{ id: 5, title: 'Card 5', content: 'Ini konten kartu 5' },
+		{ id: 1, title: 'Program Bansos', image: programBansos },
+		{ id: 2, title: 'Program Beasiswa', image: programBeasiswa },
+		{ id: 3, title: 'Program Bencana', image: programBencana },
+		{ id: 4, title: 'Program Kesehatan', image: programKesehatan },
+		{ id: 5, title: 'Program Bencana', image: programBencana2 },
 	];
 
 	const [current, setCurrent] = useState(0);
@@ -51,9 +56,7 @@ function Hero() {
 							<h2>
 								{card.title}
 							</h2>
-							<p>
-								{card.content}
-							</p>
+							<img className='carousel-image' src={card.image} alt="" />
 						</div>
 					)}
 				</div>
