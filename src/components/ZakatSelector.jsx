@@ -7,7 +7,6 @@ import ZakatFitrahCalculator from "../components/ZakatFitrah";
 
 const ZakatSelector = () => {
   const [selectedZakat, setSelectedZakat] = useState(null);
-
   const handleSelect = (type) => {
     setSelectedZakat(type);
   };
