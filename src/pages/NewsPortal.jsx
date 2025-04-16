@@ -9,6 +9,7 @@ function NewsPortal() {
         <>
             <HeadlineNews />
             <LatestNews />
+            <LatestNews />
             <Footer />
         </>
     )

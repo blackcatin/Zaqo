@@ -28,7 +28,7 @@
 .news-box {
     align-items: center;
     margin: auto;
-    width: 100%;
+    width: 97%;
     display: flex;
     gap: 20px;
     background: var(--blue);
