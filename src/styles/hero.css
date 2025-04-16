@@ -35,6 +35,7 @@
     text-align: justify;
     width: 80%;
     margin: auto;
+    font-size: 1.1rem;
 }
 
 .hero-button button {
@@ -45,6 +46,21 @@
     background-color: var(--gold);
     border: none;
     font-size: 1rem;
+    font-weight: 500;
+    transition: ease .3s;
+}
+
+.hero-button button:hover {
+    color: var(--darkblue);
+    scale: 1.1;
+}
+
+.hero-button button a {
+    text-decoration: none;
+}
+
+.hero-button button a:hover {
+    color: var(--white);
 }
 
 .carousel-wrapper {
@@ -62,6 +78,7 @@
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
+    cursor: pointer;
     transition: transform 1s;
 }
 
@@ -78,6 +95,11 @@
     backface-visibility: hidden;
     border-left: 6px solid var(--gold);
     border-right: 6px solid var(--gold);
+    transition: ease-in-out .3s;
+}
+
+.carousel-card:hover {
+    scale: 1.1;
 }
 
 .carousel-image {
@@ -94,4 +116,18 @@
     background: none;
     border: none;
     cursor: pointer;
+    transition: ease-in-out .3s;
 }
+
+.controls button:hover {
+    scale: 1.05;
+    color: var(--white);
+}
+
+@media (max-width: 480px) {}
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 999px) {}
+
+@media (min-width: 1000px) and (max-width: 1220px) {}

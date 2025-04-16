@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import './../styles/program.css';
 import programBansos from './../assets/program-bansos.jpg';
 import programBeasiswa from './../assets/program-beasiswa.jpg';
@@ -6,12 +7,11 @@ import programBencana from './../assets/program-bencana.jpg';
 import programKesehatan from './../assets/program-kesehatan.jpg';
 
 function Program() {
-    const [currentPage, setCurrentPage] = useState("program");
+    const [currentPage] = useState("program");
+    const navigate = useNavigate();
+
     return (
         <div className="program-container">
-            {currentPage !== "program" && (
-                <button onClick={() => setCurrentPage("program")} className="back-btn">←</button>
-            )}
 
             {currentPage === "program" && (
                 <>
@@ -22,46 +22,28 @@ function Program() {
                         <div className="program-card">
                             <h3>Program Bantuan Sosial</h3>
                             <img src={programBansos} alt="" />
-                            <button onClick={() => setCurrentPage("zakat")} className="btn">Lihat Program</button>
+                            <button onClick={() => navigate(`/news/program-bantuan-sosial-untuk-masyarakat-kurang-mampu`)} className="btn" >Lihat Program</button>
                         </div>
 
                         <div className="program-card">
                             <h3>Program Bantuan Bencana</h3>
                             <img src={programBencana} alt="" />
-                            <button onClick={() => setCurrentPage("jenisZakat")} className="btn">Lihat Program</button>
+                            <button onClick={() => navigate(`/news/program-bantuan-bencana`)} className="btn">Lihat Program</button>
                         </div>
 
                         <div className="program-card">
                             <h3>Program Bantuan Kesehatan</h3>
                             <img src={programKesehatan} alt="" />
-                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
+                            <button onClick={() => navigate(`/news/program-bantuan-kesehatan-untuk-desa-pelosok`)} className="btn">Lihat Program</button>
                         </div>
 
                         <div className="program-card">
                             <h3>Program Bantuan Beasiswa</h3>
                             <img src={programBeasiswa} alt="" />
-                            <button onClick={() => setCurrentPage("hitungZakat")} className="btn">Lihat Program</button>
+                            <button onClick={() => navigate(`/news/program-bantuan-beasiswa-untuk-anak-anak-yatim-piatu`)} className="btn">Lihat Program</button>
                         </div>
                     </div>
                 </>
-            )}
-
-            {currentPage === "zakat" && (
-                <div className="program-page">
-                    <h1>Jenis-Jenis Zakat</h1>
-                </div>
-            )}
-
-            {currentPage === "jenisZakat" && (
-                <div className="program-page">
-                    <h1>Jenis-Jenis Zakat</h1>
-                </div>
-            )}
-
-            {currentPage === "hitungZakat" && (
-                <div className="program-page">
-                    <h1>Cara Menghitung Zakat</h1>
-                </div>
             )}
         </div>
     );

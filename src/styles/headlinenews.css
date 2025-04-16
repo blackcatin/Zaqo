@@ -36,6 +36,9 @@
     padding: 0 40px;
 }
 
+.news-box a {
+    max-width: 65%;
+}
 
 .headline-container {
     flex: 2;
