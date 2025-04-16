@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function ZakatMaalCard({ onBack }) { 
+export default function ZakatMaalCard({ onBack }) {
   const [gaji, setGaji] = useState("");
   const [penghasilanLain, setPenghasilanLain] = useState("");
   const [hargaEmas] = useState(1904000);
@@ -119,7 +119,7 @@ export default function ZakatMaalCard({ onBack }) {
   const handleBack = () => {
     setIsPerhiasan(null);
     resetSemua();
-    if (onBack) { 
+    if (onBack) {
       onBack();
     }
   };
@@ -175,7 +175,7 @@ export default function ZakatMaalCard({ onBack }) {
               <p>
                 Nisab per bulan: <strong>Rp 7.140.498</strong>
               </p>
-            
+
               <button onClick={hitungZakatPenghasilan} className="hitung-btn">Hitung Zakat</button>
               <button onClick={resetSemua} className="reset-btn">
                 Reset
