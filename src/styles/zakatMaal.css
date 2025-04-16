@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50px;
-  left: 470px;
+  top: 20px;
+  left: 460px;
   background: var(--gold);
   transition: background-color 0.3s ease;
   border: none;
