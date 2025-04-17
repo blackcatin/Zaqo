@@ -189,3 +189,63 @@
   border-left: 4px solid #ffc107;
   border-radius: 4px;
 }
+
+@media (max-width: 480px) {
+  .zakat-container {
+    padding: 1rem;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .zakat-title {
+    font-size: 1.5rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .zakat-box {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-section input {
+    font-size: 0.95rem;
+  }
+
+  .hitung-btn,
+  .reset-btn {
+    width: 100%;
+    margin-right: 0;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .back-btn {
+    top: 15px;
+    left: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .chart-wrapper {
+    height: 200px;
+  }
+
+  .nisab-info {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .uang-img,
+  .emas-img {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -27,6 +27,7 @@ export default function ZakatMaalCard({ onBack }) {
   const [nilaiPerhiasan, setNilaiPerhiasan] = useState(0);
 
   const formRef = useRef(null);
+  const resultRef = useRef(null);
 
   const formatRupiah = (angka) => {
     if (!angka) return "Rp0";
@@ -70,6 +71,8 @@ export default function ZakatMaalCard({ onBack }) {
     } else {
       setZakat(0);
     }
+
+    resultRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const hitungZakatPerhiasan = () => {
@@ -90,6 +93,8 @@ export default function ZakatMaalCard({ onBack }) {
 
     setWajibZakatPerhiasan(true);
     setZakatPerhiasan((totalNilai * 2.5) / 100);
+
+    resultRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSelect = (type) => {
@@ -172,14 +177,10 @@ export default function ZakatMaalCard({ onBack }) {
                 readOnly
               />
 
-              <p>
-                Nisab per bulan: <strong>Rp 7.140.498</strong>
-              </p>
+              <p>Nisab per bulan: <strong>Rp 7.140.498</strong></p>
 
               <button onClick={hitungZakatPenghasilan} className="hitung-btn">Hitung Zakat</button>
-              <button onClick={resetSemua} className="reset-btn">
-                Reset
-              </button>
+              <button onClick={resetSemua} className="reset-btn">Reset</button>
 
               {wajibZakat === false && (
                 <p className="info-text">⚠️ Penghasilan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
@@ -193,10 +194,7 @@ export default function ZakatMaalCard({ onBack }) {
                       <BarChart
                         data={[
                           { name: "Zakat", jumlah: zakat },
-                          {
-                            name: "Sisa Penghasilan",
-                            jumlah: totalPenghasilan - zakat,
-                          },
+                          { name: "Sisa Penghasilan", jumlah: totalPenghasilan - zakat },
                         ]}
                         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                       >
@@ -213,7 +211,7 @@ export default function ZakatMaalCard({ onBack }) {
               )}
             </div>
           ) : (
-            <div className="form-section">
+            <div ref={resultRef} className="form-section">
               <h3>💍 Form Zakat Perhiasan</h3>
 
               <label>🔢 Jumlah Emas (gram)</label>
@@ -231,9 +229,7 @@ export default function ZakatMaalCard({ onBack }) {
               </p>
 
               <button onClick={hitungZakatPerhiasan} className="hitung-btn">Hitung Zakat</button>
-              <button onClick={resetSemua} className="reset-btn">
-                Reset
-              </button>
+              <button onClick={resetSemua} className="reset-btn">Reset</button>
 
               {wajibZakatPerhiasan === false && (
                 <p className="info-text">⚠️ Nilai perhiasan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
@@ -241,16 +237,13 @@ export default function ZakatMaalCard({ onBack }) {
 
               {wajibZakatPerhiasan && zakatPerhiasan !== null && (
                 <>
-                  <p>💸 Zakat perhiasan yang harus dibayar: <strong>{formatRupiah(zakatPerhiasan)}</strong></p>
+                  <p>💸 Zakat yang harus dibayar: <strong>{formatRupiah(zakatPerhiasan)}</strong></p>
                   <div style={{ width: "100%", height: 300 }}>
                     <ResponsiveContainer>
                       <BarChart
                         data={[
                           { name: "Zakat", jumlah: zakatPerhiasan },
-                          {
-                            name: "Sisa Nilai Perhiasan",
-                            jumlah: nilaiPerhiasan - zakatPerhiasan,
-                          },
+                          { name: "Sisa Nilai", jumlah: nilaiPerhiasan - zakatPerhiasan },
                         ]}
                         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                       >
@@ -259,7 +252,7 @@ export default function ZakatMaalCard({ onBack }) {
                         <YAxis />
                         <Tooltip formatter={(value) => formatRupiah(value)} />
                         <Legend />
-                        <Bar dataKey="jumlah" fill="#f06292" />
+                        <Bar dataKey="jumlah" fill="#f48fb1" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
