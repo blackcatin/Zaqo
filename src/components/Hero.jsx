@@ -44,10 +44,10 @@ function Hero() {
 					{featuredNews.map((news, i) => (
 						<div
 							key={news.id ?? i}
-							className="carousel-card"
-							style={{ transform: `rotateY(${i * angle}deg) translateZ(240px)` }}
+							className={`carousel-card item-${i}`}
 							onClick={() => navigate(`/news/${slugify(news.title)}`)}
 						>
+
 							<h2>{news.tag}</h2>
 							<img className="carousel-image" src={news.image} alt={news.title} />
 						</div>
@@ -58,7 +58,7 @@ function Hero() {
 					<button onClick={handleNext}>⟩</button>
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 }
 export default Hero;

@@ -21,7 +21,7 @@ function HeadlineNews() {
 
     return (
         <div className="news-container">
-            <h2>Zaqo News</h2>
+            <h2>ZAQO News</h2>
             <div className="news-box">
                 <Link to={`/news/${slugify(headline.title)}`} className="headline-link">
                     <div className="headline-container">

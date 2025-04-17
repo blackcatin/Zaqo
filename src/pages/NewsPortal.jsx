@@ -8,7 +8,7 @@ function NewsPortal() {
     return (
         <>
             <HeadlineNews />
-            <LatestNews />
+            {/* <LatestNews /> */}
             <LatestNews />
             <Footer />
         </>

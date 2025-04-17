@@ -48,10 +48,10 @@ nav {
 }
 
 .container-navbar .navbar-logo {
-    height: 4rem;
-    width: 4rem;
+    height: 64px;
+    width: 64px;
     background-color: var(--white);
-    border-radius: 50%;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,6 +98,16 @@ nav {
     z-index: 10001;
 }
 
+.menu-button {
+    border: none;
+    background: var(--blue);
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 5px;
+    padding-top: 5px;
+}
+
 .navbar-menu img {
     width: 35px;
     height: auto;
@@ -106,11 +116,11 @@ nav {
 /* Sidebar Navbar */
 .side-navbar {
     position: fixed;
-    width: 30vw;
-    height: 100vh;
+    width: 35vw;
+    height: 200vh;
     right: -100%;
     top: 0;
-    background: rgba(48, 105, 116, 0.5);
+    background: rgba(48, 105, 116, 0.8);
     align-items: center;
     justify-content: center;
     transition: right 0.3s ease-in-out;
@@ -130,6 +140,8 @@ nav {
 
 .navbar-nav a h2 {
     font-size: 2em;
+    text-decoration: underline;
+    color: var(--white);
 }
 
 .navbar-nav a {
@@ -141,19 +153,56 @@ nav {
 
 .navbar-nav a img {
     width: 20vw;
+    border-radius: 20%;
 }
 
-/* Responsif */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     .navbar-menu {
         display: block;
+        position: fixed;
     }
 
     .container-navbar {
         display: none;
     }
 
+    .side-navbar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
     .navbar-menu {
         display: block;
+        position: fixed;
+    }
+
+    .container-navbar {
+        display: none;
+    }
+
+    .side-navbar {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .navbar-menu {
+        display: block;
+        position: fixed;
+    }
+
+    .container-navbar {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1220px) {
+    .container-navbar {
+        padding: 0 4rem;
+    }
+
+    .container-navbar .zaqo-title {
+        display: none;
     }
 }

@@ -31,10 +31,6 @@
     color: var(--darkblue);
 }
 
-.footer-contact p {
-    margin: 0.2rem 0;
-}
-
 .footer-nav h4,
 .footer-policy h4,
 .footer-sosmed h4 {
@@ -91,4 +87,137 @@
 
 .footer-copyright {
     padding: 10px 0;
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    .footer-top {
+        width: 100%;
+        gap: 8px;
+        display: contents;
+    }
+
+
+    .footer-about p {
+        font-size: 0.7rem;
+    }
+
+    .footer-contact {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+
+    .footer-nav h4,
+    .footer-policy h4,
+    .footer-sosmed h4,
+    .footer-nav a,
+    .footer-sosmed a {
+        font-size: 0.7rem;
+    }
+
+    .footer-warning {
+        width: 97%;
+    }
+
+    .footer-warning p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .footer-container {
+        padding: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    .footer-top {
+        width: 100%;
+        gap: 8px;
+        display: contents;
+    }
+
+
+    .footer-about p {
+        font-size: 0.7rem;
+    }
+
+    .footer-contact {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+
+    .footer-nav h4,
+    .footer-policy h4,
+    .footer-sosmed h4,
+    .footer-nav a,
+    .footer-sosmed a {
+        font-size: 0.7rem;
+    }
+
+    .footer-warning {
+        width: 97%;
+    }
+
+    .footer-warning p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .footer-top {
+        width: 97%;
+        gap: 20px;
+    }
+
+    .footer-about p {
+        font-size: 0.8rem;
+    }
+
+    .footer-contact {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer-nav h4,
+    .footer-policy h4,
+    .footer-sosmed h4,
+    .footer-nav a,
+    .footer-sosmed a {
+        font-size: 0.8rem;
+    }
+
+    .footer-warning {
+        width: 97%;
+    }
+
+    .footer-warning p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1220px) {
+    .footer-about p {
+        font-size: 0.9rem;
+    }
+
+    .footer-contact {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .footer-nav h4,
+    .footer-policy h4,
+    .footer-sosmed h4,
+    .footer-nav a,
+    .footer-sosmed a {
+        font-size: 0.9rem;
+    }
+
+    .footer-warning p {
+        font-size: 0.9rem;
+    }
 }
