@@ -43,7 +43,7 @@ function Hero() {
 				>
 					{featuredNews.map((news, i) => (
 						<div
-							key={news.id}
+							key={news.id ?? i}
 							className="carousel-card"
 							style={{ transform: `rotateY(${i * angle}deg) translateZ(240px)` }}
 							onClick={() => navigate(`/news/${slugify(news.title)}`)}

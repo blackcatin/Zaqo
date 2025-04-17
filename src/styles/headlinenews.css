@@ -16,6 +16,7 @@
     justify-content: flex-start;
     padding: 50px 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .news-container h2 {
@@ -38,6 +39,7 @@
 
 .news-box a {
     max-width: 65%;
+    text-decoration: none;
 }
 
 .headline-container {
@@ -124,4 +126,5 @@
 .popular-news-card .tag {
     font-size: 0.75rem;
     color: var(--gold);
+    text-align: left;
 }
