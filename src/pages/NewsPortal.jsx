@@ -15,4 +15,4 @@ function NewsPortal() {
     )
 }
 
-export default NewsPortal; 
+export default NewsPortal;

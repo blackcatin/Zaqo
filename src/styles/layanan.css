@@ -16,6 +16,7 @@
     justify-content: flex-start;
     padding: 70px 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .back-btn {
@@ -75,6 +76,7 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-left: 4px solid var(--gold);
     border-right: 4px solid var(--gold);
+    text-decoration: none;
 }
 
 .layanan-card:hover {
@@ -97,6 +99,7 @@
     font-weight: 500;
     text-align: justify;
     padding-left: 20px;
+    color: var(--darkblue);
 }
 
 .layanan-card img {

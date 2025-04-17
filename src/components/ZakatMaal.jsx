@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function ZakatMaalCard({ onBack }) { 
+export default function ZakatMaalCard({ onBack }) {
   const [gaji, setGaji] = useState("");
   const [penghasilanLain, setPenghasilanLain] = useState("");
   const [hargaEmas] = useState(1904000);
@@ -119,10 +119,11 @@ export default function ZakatMaalCard({ onBack }) {
   const handleBack = () => {
     setIsPerhiasan(null);
     resetSemua();
-    if (onBack) { 
+    if (onBack) {
       onBack();
     }
   };
+};
 
   return (
     <div className="zakat-container">
@@ -150,125 +151,112 @@ export default function ZakatMaalCard({ onBack }) {
       </div>
 
       {isPerhiasan !== null && (
-        <div ref={formRef} className="form-container">
-          {!isPerhiasan ? (
-            <div className="form-section">
-              <h3>Form Zakat Penghasilan</h3>
+      <div ref={formRef} className="form-container">
+    {!isPerhiasan ? (
+      <div className="form-section">
+        <h3>Form Zakat Penghasilan</h3>
 
-              <label>💰 Gaji per bulan</label>
-              <input type="text" value={gaji} onChange={handleGajiChange} />
+        <label>💰 Gaji per bulan</label>
+        <input type="text" value={gaji} onChange={handleGajiChange} />
 
-              <label>💼 Penghasilan lain-lain</label>
-              <input
-                type="text"
-                value={penghasilanLain}
-                onChange={handlePenghasilanLainChange}
-              />
+        <label>💼 Penghasilan lain-lain</label>
+        <input
+          type="text"
+          value={penghasilanLain}
+          onChange={handlePenghasilanLainChange}
+        />
 
-              <label>📊 Total Penghasilan</label>
-              <input
-                type="text"
-                value={formatRupiah(totalPenghasilan)}
-                readOnly
-              />
+        <label>📊 Total Penghasilan</label>
+        <input
+          type="text"
+          value={formatRupiah(totalPenghasilan)}
+          readOnly
+        />
 
-              <p>
-                Nisab per bulan: <strong>Rp 7.140.498</strong>
-              </p>
-            
-              <button onClick={hitungZakatPenghasilan} className="hitung-btn">Hitung Zakat</button>
-              <button onClick={resetSemua} className="reset-btn">
-                Reset
-              </button>
+        <p>Nisab per bulan: <strong>Rp 7.140.498</strong></p>
 
-              {wajibZakat === false && (
-                <p className="info-text">⚠️ Penghasilan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
-              )}
+        <button onClick={hitungZakatPenghasilan} className="hitung-btn">Hitung Zakat</button>
+        <button onClick={resetSemua} className="reset-btn">Reset</button>
 
-              {wajibZakat && zakat !== null && (
-                <>
-                  <p>💸 Zakat yang harus dibayar: <strong>{formatRupiah(zakat)}</strong></p>
-                  <div style={{ width: "100%", height: 300 }}>
-                    <ResponsiveContainer>
-                      <BarChart
-                        data={[
-                          { name: "Zakat", jumlah: zakat },
-                          {
-                            name: "Sisa Penghasilan",
-                            jumlah: totalPenghasilan - zakat,
-                          },
-                        ]}
-                        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                      >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip formatter={(value) => formatRupiah(value)} />
-                        <Legend />
-                        <Bar dataKey="jumlah" fill="#00acc1" />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                </>
-              )}
+        {wajibZakat === false && (
+          <p className="info-text">⚠️ Penghasilan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
+        )}
+
+        {wajibZakat && zakat !== null && (
+          <>
+            <p>💸 Zakat yang harus dibayar: <strong>{formatRupiah(zakat)}</strong></p>
+            <div style={{ width: "100%", height: 300 }}>
+              <ResponsiveContainer>
+                <BarChart
+                  data={[
+                    { name: "Zakat", jumlah: zakat },
+                    { name: "Sisa Penghasilan", jumlah: totalPenghasilan - zakat },
+                  ]}
+                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip formatter={(value) => formatRupiah(value)} />
+                  <Legend />
+                  <Bar dataKey="jumlah" fill="#00acc1" />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
-          ) : (
-            <div className="form-section">
-              <h3>💍 Form Zakat Perhiasan</h3>
+          </>
+        )}
+      </div>
+    ) : (
+      <div className="form-section">
+        <h3>💍 Form Zakat Perhiasan</h3>
 
-              <label>🔢 Jumlah Emas (gram)</label>
-              <input
-                type="number"
-                value={emas}
-                onChange={(e) => setEmas(e.target.value)}
-                placeholder="Masukkan gram emas"
-              />
+        <label>🔢 Jumlah Emas (gram)</label>
+        <input
+          type="number"
+          value={emas}
+          onChange={(e) => setEmas(e.target.value)}
+          placeholder="Masukkan gram emas"
+        />
 
-              <p>📈 Harga Emas per gram: <strong>{formatRupiah(hargaEmas)}</strong></p>
+        <p>📈 Harga Emas per gram: <strong>{formatRupiah(hargaEmas)}</strong></p>
 
-              <p className="nisab-info">
-                📌 <strong>Note:</strong> Nisab emas untuk zakat adalah <strong>85 gram</strong>. Jika emas Anda di bawah jumlah ini, tidak wajib zakat.
-              </p>
+        <p className="nisab-info">
+          📌 <strong>Note:</strong> Nisab emas untuk zakat adalah <strong>85 gram</strong>. Jika emas Anda di bawah jumlah ini, tidak wajib zakat.
+        </p>
 
-              <button onClick={hitungZakatPerhiasan} className="hitung-btn">Hitung Zakat</button>
-              <button onClick={resetSemua} className="reset-btn">
-                Reset
-              </button>
+        <button onClick={hitungZakatPerhiasan} className="hitung-btn">Hitung Zakat</button>
+        <button onClick={resetSemua} className="reset-btn">Reset</button>
 
-              {wajibZakatPerhiasan === false && (
-                <p className="info-text">⚠️ Nilai perhiasan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
-              )}
+        {wajibZakatPerhiasan === false && (
+          <p className="info-text">⚠️ Nilai perhiasan Anda belum mencapai nisab. TIDAK WAJIB membayar zakat.</p>
+        )}
 
-              {wajibZakatPerhiasan && zakatPerhiasan !== null && (
-                <>
-                  <p>💸 Zakat perhiasan yang harus dibayar: <strong>{formatRupiah(zakatPerhiasan)}</strong></p>
-                  <div style={{ width: "100%", height: 300 }}>
-                    <ResponsiveContainer>
-                      <BarChart
-                        data={[
-                          { name: "Zakat", jumlah: zakatPerhiasan },
-                          {
-                            name: "Sisa Nilai Perhiasan",
-                            jumlah: nilaiPerhiasan - zakatPerhiasan,
-                          },
-                        ]}
-                        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                      >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip formatter={(value) => formatRupiah(value)} />
-                        <Legend />
-                        <Bar dataKey="jumlah" fill="#f06292" />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                </>
-              )}
+        {wajibZakatPerhiasan && zakatPerhiasan !== null && (
+          <>
+            <p>💸 Zakat yang harus dibayar: <strong>{formatRupiah(zakatPerhiasan)}</strong></p>
+            <div style={{ width: "100%", height: 300 }}>
+              <ResponsiveContainer>
+                <BarChart
+                  data={[
+                    { name: "Zakat", jumlah: zakatPerhiasan },
+                    { name: "Sisa Nilai", jumlah: nilaiPerhiasan - zakatPerhiasan },
+                  ]}
+                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip formatter={(value) => formatRupiah(value)} />
+                  <Legend />
+                  <Bar dataKey="jumlah" fill="#f48fb1" />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
-          )}
-        </div>
+          </>
+        )}
+      </div>
+    )}
+  </div>
       )}
-    </div>
-  );
-}
+      </div>
+  )
