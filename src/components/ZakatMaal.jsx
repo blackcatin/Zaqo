@@ -122,8 +122,7 @@ export default function ZakatMaalCard({ onBack }) {
     if (onBack) {
       onBack();
     }
-  };
-};
+  }
 
   return (
     <div className="zakat-container">
@@ -259,4 +258,4 @@ export default function ZakatMaalCard({ onBack }) {
   </div>
       )}
       </div>
-  )
+  )}
