@@ -12,8 +12,6 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 20px;
-  left: 460px;
   background: var(--gold);
   transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
@@ -21,7 +19,6 @@
   color: var(--white);
   cursor: pointer;
   z-index: 10;
-  
 }
 
 .back-btn:hover {

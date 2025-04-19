@@ -12,12 +12,12 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   position: relative;
-    padding: 2rem;
-    max-width: 600px;
-    margin: auto;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 .back-btn { 
@@ -138,12 +138,12 @@
     font-size: 0.85rem;
   }
 
-  .back-btn {
-    top: 15px; 
+  .back-btn { 
+    top: 15px;
     left: 15px;
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
+    width: 36px; 
+    height: 36px;
+    font-size: 20px; 
   }
 
   .hitung-btn,
@@ -180,51 +180,8 @@
 
 @media (min-width: 768px) {
   .back-btn {
-    top: 15px; 
-    left: 20px;
+    top: 20px; 
+    left: 200px;
   }
 }
-
-  
-  @media (max-width: 480px) {
-    .fitrah-container {
-      padding: 1rem;
-      max-width: 320px;
-      margin: 0 auto;
-    }
-  
-    .fitrah-title {
-      font-size: 1.5rem;
-    }
-  
-    .fitrah-subtitle {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-  
-    .form-group input {
-      font-size: 0.95rem;
-    }
-  
-    .hitung-btn,
-    .reset-btn {
-      width: 100%;
-      margin-right: 0;
-      font-size: 0.95rem;
-      padding: 0.6rem;
-    }
-  
-    .back-button {
-      top: 15px;
-      left: 15px;
-      width: 36px;
-      height: 36px;
-      font-size: 20px;
-    }
-  
-    .result {
-      font-size: 0.85rem;
-      padding: 10px;
-    }
-  }
 
