@@ -1,19 +1,20 @@
 :root {
-    --blue: #4dc3c3;
-    --gold: #edc9b3;
-    --white: #ffffff;
+  --blue: #4dc3c3;
+  --gold: #edc9b3;
+  --white: #ffffff;
 }
 
 .fitrah-container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
-.back-button {
+.back-btn { 
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -21,100 +22,159 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50px;
-  left: 470px;
   background: var(--gold);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
   font-size: 24px;
   color: var(--white);
   cursor: pointer;
+  z-index: 10;
+  left: 20px; 
+  top: 20px; 
 }
 
-.back-button:hover {
+.back-btn:hover {
   background: #e6b08f;
   transform: scale(1.05);
 }
 
-  
-  
+.fitrah-title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.fitrah-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.hitung-btn {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #00acc1;
+  color: white;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.hitung-btn:hover {
+  background-color: #008b9c;
+}
+
+.reset-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f0fff4;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 480px) {
+  .fitrah-container {
+    padding: 15px;
+  }
+
   .fitrah-title {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #2c3e50;
+    font-size: 1.3rem;
   }
-  
+
   .fitrah-subtitle {
-    text-align: center;
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 6px;
-    text-align: left;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-  }
-  
-  .form-group small {
-    display: block;
-    margin-top: 5px;
-    color: #777;
     font-size: 0.85rem;
   }
-  
-  .hitung-btn {
-    margin-top: 1.5rem;
-    margin-right: 1rem;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #00acc1;
-    color: white;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
+
+  .back-btn {
+    top: 15px; 
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
   }
-  
-  .hitung-btn:hover {
-    background-color: #008b9c;
-  }
-  
+
+  .hitung-btn,
   .reset-btn {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 10px 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 0 0 10px 0;
   }
-  
-  .reset-btn:hover {
-    background-color: #d32f2f;
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .fitrah-container {
+    padding: 20px;
   }
-  
-  .result {
-    margin-top: 25px;
-    padding: 15px;
-    background: #f0fff4;
-    border: 1px solid #c8e6c9;
-    border-radius: 10px;
+
+  .fitrah-title {
+    font-size: 1.5rem;
   }
-  
+
+  .fitrah-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .back-btn {
+    top: 15px;
+    left: 20px;
+  }
+
+  .hitung-btn,
+  .reset-btn {
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .back-btn {
+    top: 15px; 
+    left: 20px;
+  }
+}
