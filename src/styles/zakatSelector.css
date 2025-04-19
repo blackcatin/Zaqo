@@ -5,15 +5,138 @@
 }
 
 .zakat-selector-container {
-  text-align: center;
-  background: var(--blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 70px 20px;
-  border-radius: 20px;
-}
+    text-align: center;
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px 20px;
+    border-radius: 20px;
+  }
+  
+  .zakat-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #2c3e50;;
+  }
+  
+  .zakat-subtitle {
+    color: #30373f; 
+    margin-bottom: 1.5rem;
+  }
+  
+  .zakat-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+
+  }
+
+  .zakat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; 
+    margin-bottom: 1rem;
+  }
+  
+  .zakat-img {
+    max-width: 80px;      
+    max-height: 80px;    
+    width: auto;
+    height: auto;
+    object-fit: contain;  
+  }
+  
+  .zakat-box {
+    cursor: pointer;
+    border: 1px solid #e5e7eb; 
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid var(--gold);
+    border-right: 6px solid var(--gold);
+  }
+  
+  .zakat-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9fafb; 
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .zakat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .zakat-box-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #2c3e50;
+  }
+  
+  .zakat-box-desc {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+
+  @media (max-width: 480px) {
+    .zakat-selector-container {
+      padding: 1rem;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  
+    .zakat-title {
+      font-size: 1.5rem;
+    }
+  
+    .zakat-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .zakat-box-wrapper {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .zakat-box {
+      padding: 1rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .zakat-icon {
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+  
+    .zakat-img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+  
+    .zakat-box-title {
+      font-size: 1.1rem;
+    }
+  
+    .zakat-box-desc {
+      font-size: 0.85rem;
+    }
+  }
+
 
 .zakat-title {
   font-size: 1.875rem;

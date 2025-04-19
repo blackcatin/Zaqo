@@ -321,8 +321,106 @@ body {
     flex-direction: row;
     justify-content: center;
   }
-
-  .modul-card {
-    width: calc(50% - 10px);
-  }
 }
+
+@media (max-width: 480px) {
+    body {
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .modul-container {
+        padding: 1rem;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+  
+    .modul-container h1 {
+      font-size: 1.4rem;
+    }
+  
+    .modul-container p {
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+  
+    .modul-list {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .modul-card {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .modul-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .modul-card p {
+      font-size: 0.95rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  
+    .back-btn {
+      top: 15px;
+      left: 15px;
+      width: 34px;
+      height: 34px;
+      font-size: 18px;
+    }
+  
+    .zakat-content {
+      padding: 20px;
+      max-width: 100%;
+      border-radius: 10px;
+      border-right: none;
+      box-shadow: none;
+    }
+  
+    .sub-bab h2 {
+      font-size: 1.1rem;
+    }
+  
+    .sub-bab p,
+    .zakat-list li {
+      font-size: 0.95rem;
+    }
+  
+    .blockquote p {
+      font-size: 0.95rem;
+    }
+  
+    .quote-card .arabic-text {
+      font-size: 1.3rem;
+    }
+  
+    .quote-card .translation-text {
+      font-size: 1rem;
+      padding: 0;
+    }
+  
+    .quote-card .source-text {
+      font-size: 0.85rem;
+    }
+  
+    .chart-wrapper {
+      height: 200px;
+      width: 100%;
+    }
+  
+    .nisab-info {
+      font-size: 0.85rem;
+      padding: 5px 8px;
+    }
+
+    .modul-card {
+      width: calc(50% - 10px);
+    }
+  }

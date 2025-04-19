@@ -59,64 +59,70 @@ const ZakatFitrahCalculator = ({ onBack }) => {
 
   const handleBack = () => {
     if (onBack) {
-      onBack(); 
+      onBack();
     } else {
-      navigate(-1); 
+      navigate(-1);
     }
   };
 
   return (
-    <div className="fitrah-container">
+    <>
+      <div className="fitrah-container">
         <button onClick={handleBack} className="back-btn">←</button>
+
 
       <h2 className="fitrah-title">Kalkulator Zakat Fitrah</h2>
       <p className="fitrah-subtitle">Isi data berikut untuk menghitung total zakat fitrah yang harus dibayarkan oleh keluargamu.</p>
+=======
+        <h2 className="fitrah-title">💰 Kalkulator Zakat Fitrah</h2>
+        <p className="fitrah-subtitle">Isi data berikut untuk menghitung total zakat fitrah yang harus dibayarkan oleh keluargamu.</p>
 
-      <div className="form-group">
-        <label>👨‍👩‍👧‍👦 Jumlah anggota keluarga</label>
-        <input
-          type="number"
-          min="1"
-          placeholder="Contoh: 4"
-          value={jumlahAnggota}
-          onChange={(e) => setJumlahAnggota(e.target.value)}
-        />
-        <small>Masukkan jumlah total orang yang akan dibayarkan zakatnya (termasuk kamu).</small>
-      </div>
-
-      <div className="form-group">
-        <label>🍚 Harga beras per kilogram (dalam Rupiah)</label>
-        <input
-          type="text"
-          inputMode="numeric"
-          placeholder="Contoh: Rp 15.000"
-          value={hargaBeras}
-          onChange={handleHargaBerasChange}
-        />
-        <small>Cek harga beras di pasar/mart sekitar kamu. Zakat Fitrah = 2.5 kg beras per orang.</small>
-      </div>
-
-      <div >
-        <button onClick={hitungZakat} className="hitung-btn">Hitung Zakat Fitrah</button>
-        <button onClick={handleReset} className="reset-btn">Reset</button>
-      </div>
-
-      {showResult && (
-        <div className="result">
-          <h3>🧾 Hasil Perhitungan</h3>
-          <p>Jumlah anggota: <strong>{jumlahAnggota}</strong></p>
-          <p>Harga beras per kg: <strong>{hargaBeras}</strong></p>
-          <p>Total zakat dalam bentuk uang: </p>
-          <h2 style={{ color: '#2e7d32' }}>Rp {totalZakat.toLocaleString()}</h2>
-          <p>(2.5 kg x {hargaBeras} per orang) x {jumlahAnggota} orang</p>
-
-          <br />
-          <p>Atau kamu juga bisa membayarkan dalam bentuk:</p>
-          <h3 style={{ color: '#0277bd' }}>{totalBeras} kg beras</h3>
-          <p>(2.5 kg x {jumlahAnggota} orang)</p>
+        <div className="form-group">
+          <label>👨‍👩‍👧‍👦 Jumlah anggota keluarga</label>
+          <input
+            type="number"
+            min="1"
+            placeholder="Contoh: 4"
+            value={jumlahAnggota}
+            onChange={(e) => setJumlahAnggota(e.target.value)}
+          />
+          <small>Masukkan jumlah total orang yang akan dibayarkan zakatnya (termasuk kamu).</small>
         </div>
-      )}
-    </div>
+
+        <div className="form-group">
+          <label>🍚 Harga beras per kilogram (dalam Rupiah)</label>
+          <input
+            type="text"
+            inputMode="numeric"
+            placeholder="Contoh: Rp 15.000"
+            value={hargaBeras}
+            onChange={handleHargaBerasChange}
+          />
+          <small>Cek harga beras di pasar/mart sekitar kamu. Zakat Fitrah = 2.5 kg beras per orang.</small>
+        </div>
+
+        <div >
+          <button onClick={hitungZakat} className="hitung-btn">Hitung Zakat Fitrah</button>
+          <button onClick={handleReset} className="reset-btn">Reset</button>
+        </div>
+
+        {showResult && (
+          <div className="result">
+            <h3>🧾 Hasil Perhitungan</h3>
+            <p>Jumlah anggota: <strong>{jumlahAnggota}</strong></p>
+            <p>Harga beras per kg: <strong>{hargaBeras}</strong></p>
+            <p>Total zakat dalam bentuk uang: </p>
+            <h2 style={{ color: '#2e7d32' }}>Rp {totalZakat.toLocaleString()}</h2>
+            <p>(2.5 kg x {hargaBeras} per orang) x {jumlahAnggota} orang</p>
+
+            <br />
+            <p>Atau kamu juga bisa membayarkan dalam bentuk:</p>
+            <h3 style={{ color: '#0277bd' }}>{totalBeras} kg beras</h3>
+            <p>(2.5 kg x {jumlahAnggota} orang)</p>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

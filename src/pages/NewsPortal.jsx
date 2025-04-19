@@ -9,9 +9,10 @@ function NewsPortal() {
         <>
             <HeadlineNews />
             <LatestNews />
+            <LatestNews />
             <Footer />
         </>
     )
 }
 
-export default NewsPortal; 
+export default NewsPortal;

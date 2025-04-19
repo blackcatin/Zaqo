@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  top: 20px;
+  left: 460px;
   background: var(--gold);
   transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
@@ -216,6 +218,19 @@
   .zakat-box-wrapper {
     flex-direction: column;
     gap: 0.8rem;
+
+  .zakat-container {
+    padding: 1rem;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .zakat-title {
+    font-size: 1.5rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -226,6 +241,39 @@
 
   .zakat-icon {
     margin-bottom: 0.8rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-section input {
+    font-size: 0.95rem;
+  }
+
+  .hitung-btn,
+  .reset-btn {
+    width: 100%;
+    margin-right: 0;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .back-btn {
+    top: 15px;
+    left: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .chart-wrapper {
+    height: 200px;
+  }
+
+  .nisab-info {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 
   .uang-img,
@@ -285,6 +333,8 @@
     border-radius: 3px;
   }
 }
+}
+
 
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -499,4 +549,5 @@
     font-size: 1.15rem;
     margin-bottom: 3rem;
   }
+
 }

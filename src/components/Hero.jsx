@@ -1,25 +1,24 @@
-import { Children, useState } from 'react';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './../styles/hero.css';
+import newsData from '../data/newsData';
+
+function slugify(str) {
+	return str.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-');
+}
 
 function Hero() {
-	const [currentPage, setCurrentPage] = useState('hero');
-	const cards = [
-		{ id: 1, title: 'Card 1', content: 'Ini konten kartu 1' },
-		{ id: 2, title: 'Card 2', content: 'Ini konten kartu 2' },
-		{ id: 3, title: 'Card 3', content: 'Ini konten kartu 3' },
-		{ id: 4, title: 'Card 4', content: 'Ini konten kartu 4' },
-		{ id: 5, title: 'Card 5', content: 'Ini konten kartu 5' },
-	];
-
+	const featuredNews = newsData.slice(0, 5);
 	const [current, setCurrent] = useState(0);
-	const angle = 360 / cards.length;
+	const angle = 360 / featuredNews.length;
+	const navigate = useNavigate();
 
 	const handlePrev = () => {
-		setCurrent(prev => (prev - 1 + cards.length) % cards.length);
+		setCurrent(prev => (prev - 1 + featuredNews.length) % featuredNews.length);
 	};
 
 	const handleNext = () => {
-		setCurrent(prev => (prev + 1) % cards.length);
+		setCurrent(prev => (prev + 1) % featuredNews.length);
 	};
 
 	return (
@@ -33,8 +32,8 @@ function Hero() {
 					untuk mewujudkan kebahagiaan masyarakat yang membutuhkan.
 				</h3>
 				<div className="hero-button">
-					<button className="kalkulator-button">Kalkulator</button>
-					<button className="pembelajaran-button">Pembelajaran</button>
+					<button className="kalkulator-button"><Link to="/calculator">KALKULATOR</Link></button>
+					<button className="pembelajaran-button"><Link to="/modul">PEMBELAJARAN</Link></button>
 				</div>
 			</div>
 			<div className="carousel-wrapper">
@@ -42,20 +41,17 @@ function Hero() {
 					className="carousel"
 					style={{ transform: `translateZ(-300px) rotateY(-${current * angle}deg)` }}
 				>
-					{cards.map((card, i) =>
+					{featuredNews.map((news, i) => (
 						<div
-							key={card.id}
+							key={news.id ?? i}
 							className="carousel-card"
 							style={{ transform: `rotateY(${i * angle}deg) translateZ(240px)` }}
+							onClick={() => navigate(`/news/${slugify(news.title)}`)}
 						>
-							<h2>
-								{card.title}
-							</h2>
-							<p>
-								{card.content}
-							</p>
+							<h2>{news.tag}</h2>
+							<img className="carousel-image" src={news.image} alt={news.title} />
 						</div>
-					)}
+					))}
 				</div>
 				<div className="controls">
 					<button onClick={handlePrev}>⟨</button>

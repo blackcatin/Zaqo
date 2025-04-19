@@ -16,6 +16,7 @@
     justify-content: flex-start;
     padding: 70px 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .back-btn {
@@ -101,6 +102,7 @@
     border-radius: 5px;
     font-size: 13px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
