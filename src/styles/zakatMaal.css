@@ -4,7 +4,7 @@
   --white: #ffffff;
 }
 
-.back-btn {
+.back-btn { 
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -12,14 +12,13 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 20px;
-  left: 460px;
   background: var(--gold);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
   font-size: 24px;
   color: var(--white);
   cursor: pointer;
+  z-index: 10;
 }
 
 .back-btn:hover {
@@ -191,6 +190,32 @@
 }
 
 @media (max-width: 480px) {
+  .back-btn {
+    top: 15px;
+    left: 15px; 
+    right: auto;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .zakat-container {
+    padding: 1.5rem;
+  }
+
+  .zakat-title {
+    font-size: 1.6rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .zakat-box-wrapper {
+    flex-direction: column;
+    gap: 0.8rem;
+
   .zakat-container {
     padding: 1rem;
     max-width: 320px;
@@ -208,6 +233,11 @@
 
   .zakat-box {
     width: 100%;
+    padding: 1rem;
+  }
+
+  .zakat-icon {
+    margin-bottom: 0.8rem;
   }
 
   .form-section {
@@ -248,4 +278,273 @@
     width: 50px;
     height: 50px;
   }
+
+  .form-container {
+    margin-top: 1.5rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-section label {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .form-section p {
+    font-size: 0.85rem;
+  }
+
+  .form-section input {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  .hitung-btn {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+
+  .reset-btn {
+    padding: 0.8rem 1.2rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .chart-wrapper {
+    height: 200px;
+    margin-top: 15px;
+  }
+
+  .nisab-info {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border-left-width: 3px;
+    border-radius: 3px;
+  }
+}
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .back-btn {
+    top: 20px;
+    left: 20px; 
+    right: auto;
+  }
+
+  .zakat-container {
+    padding: 2rem;
+  }
+
+  .zakat-title {
+    font-size: 1.8rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .zakat-box-wrapper {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .zakat-box {
+    width: calc(50% - 0.75rem); 
+    padding: 1.1rem;
+  }
+
+  .zakat-icon {
+    margin-bottom: 0.9rem;
+  }
+
+  .uang-img,
+  .emas-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .form-container {
+    margin-top: 1.8rem;
+  }
+
+  .form-section {
+    padding: 1.2rem;
+  }
+
+  .form-section label {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .form-section p {
+    font-size: 0.9rem;
+  }
+
+  .form-section input {
+    padding: 0.55rem;
+    margin-top: 0.25rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+
+  .hitung-btn {
+    margin-top: 1.2rem;
+    margin-right: 0.75rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+  }
+
+  .reset-btn {
+    padding: 0.9rem 1.4rem;
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+
+  .chart-wrapper {
+    height: 250px;
+    margin-top: 18px;
+  }
+
+  .nisab-info {
+    font-size: 0.85rem;
+    padding: 7px 11px;
+    border-left-width: 3.5px;
+    border-radius: 3.5px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .back-btn {
+    top: 20px;
+    left: 20px; 
+    right: auto;
+  }
+
+  .zakat-container {
+    padding: 3rem;
+    max-width: 768px;
+  }
+
+  .zakat-title {
+    font-size: 2.2rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .zakat-box-wrapper {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .zakat-box {
+    width: 300px; 
+    padding: 1.5rem;
+  }
+
+  .zakat-icon {
+    margin-bottom: 1.2rem;
+  }
+
+  .uang-img,
+  .emas-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .form-container {
+    margin-top: 2.5rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-section label {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .form-section p {
+    font-size: 0.95rem;
+  }
+
+  .form-section input {
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .hitung-btn {
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+
+  .reset-btn {
+    padding: 1rem 1.6rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .chart-wrapper {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .nisab-info {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-left-width: 4px;
+    border-radius: 4px;
+  }
+}
+
+
+@media (min-width: 1201px) {
+  .zakat-container {
+    max-width: 960px; 
+  }
+
+  .zakat-box-wrapper {
+    gap: 2.5rem;
+  }
+
+  .zakat-box {
+    width: 350px;
+    padding: 1.7rem;
+  }
+
+  .zakat-title {
+    font-size: 2.4rem;
+  }
+
+  .zakat-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+  }
+
 }

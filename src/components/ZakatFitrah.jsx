@@ -67,10 +67,9 @@ const ZakatFitrahCalculator = ({ onBack }) => {
 
   return (
     <>
+      <button onClick={handleBack} className="back-btn">←</button>
       <div className="fitrah-container">
-        <button onClick={handleBack} className="back-btn">←</button>
-
-        <h2 className="fitrah-title">💰 Kalkulator Zakat Fitrah</h2>
+        <h2 className="fitrah-title"> Kalkulator Zakat Fitrah</h2>
         <p className="fitrah-subtitle">Isi data berikut untuk menghitung total zakat fitrah yang harus dibayarkan oleh keluargamu.</p>
 
         <div className="form-group">
