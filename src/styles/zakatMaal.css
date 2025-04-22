@@ -4,7 +4,7 @@
   --white: #ffffff;
 }
 
-.back-btn { 
+.back-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -161,6 +161,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -192,7 +193,7 @@
 @media (max-width: 480px) {
   .back-btn {
     top: 15px;
-    left: 15px; 
+    left: 15px;
     right: auto;
     width: 30px;
     height: 30px;
@@ -215,9 +216,10 @@
   .zakat-box-wrapper {
     flex-direction: column;
     gap: 0.8rem;
+  }
 
   .zakat-container {
-    padding: 1rem;
+    padding: 0;
     max-width: 320px;
     margin: 0 auto;
   }
@@ -330,14 +332,13 @@
     border-radius: 3px;
   }
 }
-}
 
 
 
 @media (min-width: 481px) and (max-width: 767px) {
   .back-btn {
     top: 20px;
-    left: 20px; 
+    left: 20px;
     right: auto;
   }
 
@@ -361,7 +362,7 @@
   }
 
   .zakat-box {
-    width: calc(50% - 0.75rem); 
+    width: calc(50% - 0.75rem);
     padding: 1.1rem;
   }
 
@@ -431,7 +432,7 @@
 @media (min-width: 768px) {
   .back-btn {
     top: 20px;
-    left: 20px; 
+    left: 20px;
     right: auto;
   }
 
@@ -457,7 +458,7 @@
   }
 
   .zakat-box {
-    width: 300px; 
+    width: 300px;
     padding: 1.5rem;
   }
 
@@ -526,7 +527,7 @@
 
 @media (min-width: 1201px) {
   .zakat-container {
-    max-width: 960px; 
+    max-width: 960px;
   }
 
   .zakat-box-wrapper {

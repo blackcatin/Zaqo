@@ -135,11 +135,18 @@
     }
 
     .program-card h3 {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .program-card img {
         width: 230px;
+    }
+
+    .program-card .btn {
+        width: 180px;
+        margin: 5px;
+        padding: 4px 9px;
+        font-size: 0.75rem;
     }
 }
 
