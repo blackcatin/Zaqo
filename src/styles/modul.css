@@ -127,6 +127,7 @@ body {
   color: #2c3e50;
 }
 
+/* ini yang buat pengantar zakat la! */
 .zakat-content {
   display: flex;
   flex-direction: column;
@@ -226,6 +227,112 @@ body {
   font-size: 0.95rem;
   color: #777;
 }
+
+/* nahh kalo yang ini jenis" zakat */
+.card {
+  background-color: #e0f2f1;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #004d40;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+.zakat-info {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.zakat-info strong {
+  color: #285e61;
+  font-weight: bold;
+}
+
+.zakat-info p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.zakat-info ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.zakat-info li {
+  margin-bottom: 5px;
+}
+
+.kadar {
+  margin-top: 15px;
+}
+
+.subjek {
+  margin-top: 15px;
+}
+
+.tujuan {
+  margin-top: 15px;
+}
+
+.zakat-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.zakat-table th,
+.zakat-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.zakat-table th {
+  background-color: #e0f2f1;
+  color: #004d40;
+}
+
+.zakat-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+blockquote {
+  background-color: #e0f2f1;;
+  border-left: 4px solid var(--blue);
+  margin: 1rem 0;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+.section-quote p {
+  color: #004d40;
+}
+
 
 @media (max-width: 600px) {
   body {
