@@ -23,7 +23,7 @@ function Modul() {
                         </div>
 
                         <div className="modul-card">
-                            <h3>Modul 2: Jenis-jenis Zakat</h3>
+                            <h3>Modul 2: Jenis-Jenis Zakat</h3>
                             <p>Pelajari jenis-jenis zakat, seperti zakat fitrah, maal, profesi, dan lainnya.</p>
                             <button onClick={() => setCurrentPage("jenisZakat")} className="btn">Baca Modul</button>
                         </div>

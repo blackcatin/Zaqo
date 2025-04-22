@@ -438,9 +438,8 @@ blockquote {
     }
   
     .modul-container {
-        padding: 1rem;
         max-width: 320px;
-        margin: 0 auto;
+        align-items: center;
     }
   
     .modul-container h1 {
@@ -453,13 +452,15 @@ blockquote {
     }
   
     .modul-list {
-      flex-direction: column;
-      gap: 15px;
+      /* flex-direction: column; */
+      gap: 10px;
+      align-items: center;
     }
   
     .modul-card {
       width: 100%;
-      padding: 15px;
+      padding: 10px;
+      align-items: center;
     }
   
     .modul-card h3 {
