@@ -13,13 +13,19 @@ function Layanan() {
             <p></p>
 
             <div className="layanan-list">
-                <Link className="layanan-card">
-                    <img src={chatIcon} alt="" to="/" />
+                <a
+                    href="https://wa.me/6281216547789"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="layanan-card"
+                >
+                    <img src={chatIcon} alt="Chat Icon" />
                     <div className="layanan-card-detail">
                         <h3>Donature Care</h3>
                         <h5>Mari berbincang lebih lengkap terkait program & layanan kami.</h5>
                     </div>
-                </Link>
+                </a>
+
 
                 <Link className="layanan-card" to="/newsportal">
                     <img src={newsIcon} alt="" />
