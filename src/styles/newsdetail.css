@@ -41,3 +41,15 @@
     margin-bottom: 0.75rem;
     text-align: justify;
 }
+
+@media (max-width: 480px) {
+    .news-detail p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .news-detail p {
+        font-size: 0.8rem;
+    }
+}

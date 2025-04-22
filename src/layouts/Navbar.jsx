@@ -53,6 +53,9 @@ function Navbar() {
 					<NavLink className="c" to="/modul">
 						Pembelajaran
 					</NavLink>
+					<NavLink className="c" to="/newsportal">
+						Berita
+					</NavLink>
 				</div>
 			</div>
 		</nav>
