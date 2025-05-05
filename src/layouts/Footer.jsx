@@ -61,7 +61,7 @@ function Footer() {
             </div>
 
             <div className="footer-warning">
-                <p>⚠️ Dana yang didonasikan melalui Rumah Zakat bukan bersumber dan bukan untuk tujuan pencucian uang (money laundry), termasuk terorisme maupun tindak kejahatan lainnya.</p>
+                <p>⚠️ Dana yang didonasikan melalui Zaqo bukan bersumber dan bukan untuk tujuan pencucian uang (money laundry), termasuk terorisme maupun tindak kejahatan lainnya.</p>
             </div>
 
             <div className="footer-bottom">
